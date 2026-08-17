@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@source "../src";
+@import "tw-animate-css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * WOPF — We Own Pakistan Foundation design system.
+ * Brand: #017233 green, white, black + warm gold/sand accents.
+ * All colors are oklch semantic tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.995 0.004 120);
+  --foreground: oklch(0.18 0.02 155);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 155);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 155);
+
+  /* #017233 */
+  --primary: oklch(0.472 0.126 156.5);
+  --primary-foreground: oklch(0.99 0.005 140);
+  --primary-deep: oklch(0.315 0.086 157);
+  --primary-soft: oklch(0.945 0.034 152);
+
+  --secondary: oklch(0.96 0.018 150);
+  --secondary-foreground: oklch(0.28 0.06 156);
+
+  --muted: oklch(0.965 0.008 140);
+  --muted-foreground: oklch(0.5 0.02 155);
+
+  --accent: oklch(0.93 0.05 148);
+  --accent-foreground: oklch(0.3 0.08 156);
+
+  /* warm gold from the emblem */
+  --gold: oklch(0.83 0.115 92);
+  --gold-foreground: oklch(0.26 0.05 90);
+  --sand: oklch(0.965 0.026 92);
+
+  --ink: oklch(0.16 0.014 150);
+  --ink-foreground: oklch(0.97 0.008 140);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.9 0.012 150);
+  --input: oklch(0.9 0.012 150);
+  --ring: oklch(0.472 0.126 156.5);
+
+  --gradient-brand: linear-gradient(135deg, var(--primary-deep), var(--primary) 55%, oklch(0.62 0.13 150));
+  --gradient-gold: linear-gradient(120deg, var(--gold), oklch(0.9 0.08 95));
+  --gradient-veil: linear-gradient(
+    to right,
+    oklch(0.16 0.03 155 / 0.92),
+    oklch(0.16 0.03 155 / 0.7) 45%,
+    oklch(0.16 0.03 155 / 0.25)
+  );
+
+  --shadow-soft: 0 1px 2px oklch(0.2 0.03 155 / 0.05), 0 12px 32px -12px oklch(0.2 0.03 155 / 0.18);
+  --shadow-lift: 0 24px 60px -24px oklch(0.35 0.09 156 / 0.4);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* On narrow screens the horizontal veil leaves text over bright imagery,
+   so we switch to a vertical, darker scrim. */
+@media (max-width: 767px) {
+  :root {
+    --gradient-veil: linear-gradient(
+      to bottom,
+      oklch(0.16 0.03 155 / 0.72),
+      oklch(0.16 0.03 155 / 0.82) 60%,
+      oklch(0.16 0.03 155 / 0.9)
+    );
+  }
+}
+
+/* ---------- Reusable design-system utilities ---------- */
+
+@utility container-wopf {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@utility surface-brand {
+  background-image: var(--gradient-brand);
+  color: var(--color-primary-foreground);
+}
+
+@utility text-gradient-brand {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility veil {
+  background-image: var(--gradient-veil);
+}
+
+/* Decorative arch shape echoing the emblem / regional architecture */
+@utility arch {
+  border-radius: 14rem 14rem var(--radius-2xl) var(--radius-2xl);
+}
+
+/* Reveal-on-scroll (driven by jQuery in src/lib/interactions.ts) */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ---------- Slick slider theming ---------- */
+.slick-slider,
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+.slick-dots {
+  bottom: 1.75rem;
+}
+
+.slick-dots li button:before {
+  font-size: 9px;
+  color: var(--color-primary-foreground);
+  opacity: 0.45;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--color-gold);
+  opacity: 1;
+}
+
+.works-slider .slick-dots {
+  position: static;
+  margin-top: 1.75rem;
+}
+
+/* Keep slick tracks from stretching layout on small screens */
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.works-slider .slick-dots li button:before {
+  color: var(--color-primary);
+  opacity: 0.3;
+}
+
+.works-slider .slick-dots li.slick-active button:before {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
