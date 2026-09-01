@@ -33,9 +33,9 @@ export const NAV = [
 ] as const;
 
 export const STATS = [
-  { value: "50,000+", label: "Meals served" },
-  { value: "120+", label: "Villages reached" },
-  { value: "35", label: "Medical camps" },
+  { value: "10 years", label: "Ramandan Drive" },
+  { value: "50+", label: "Villages reached" },
+  { value: "35", label: "Rashan Distribution" },
   { value: "900+", label: "Active volunteers" },
 ];
 

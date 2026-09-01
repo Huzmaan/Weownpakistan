@@ -45,8 +45,8 @@ const HERO_SLIDES = [
   },
   {
     image: heroFood,
-    eyebrow: "Food security",
-    title: "We own Pakistan and we own its hungriest days.",
+    eyebrow: "Rashan Distribution Activity",
+    title: "We Own Pakistan",
     text: "Ration hampers reaching families in interior Sindh who are usually the last on every list.",
   },
   {
