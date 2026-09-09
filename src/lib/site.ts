@@ -32,6 +32,12 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
+export const SERVICE_PAGES = [
+  { label: "Health & Medical Support", to: "/services/health-medical-support" },
+  // add more service pages here as you create them, e.g.:
+  // { label: "Food & Ration Distribution", to: "/services/food-ration-distribution" },
+] as const;
+
 export const STATS = [
   { value: "10 years", label: "Ramandan Drive" },
   { value: "50+", label: "Villages reached" },

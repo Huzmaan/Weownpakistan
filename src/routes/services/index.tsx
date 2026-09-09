@@ -10,7 +10,7 @@ import workYouth from "@/assets/work-youth.jpg";
 import workMedical from "@/assets/work-medical.jpg";
 import workChildren from "@/assets/our-works/orphange/005.jpeg";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Our Services | Food, Water, Health & Youth Programs WOPF" },
