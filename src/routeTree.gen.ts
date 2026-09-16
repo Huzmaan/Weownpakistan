@@ -17,7 +17,13 @@ import { Route as OurWorksRouteImport } from './routes/our-works'
 import { Route as ServicesRouteRouteImport } from './routes/services/route'
 import { Route as ApiContactRouteImport } from './routes/api.contact'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as ServicesDisabilityCareSupportChar38RehabilitationRouteImport } from './routes/services/disability-care-support-&-rehabilitation'
+import { Route as ServicesDisasterChar38EmergencyReliefRouteImport } from './routes/services/disaster-&-emergency-relief'
+import { Route as ServicesEducationChar38SkillsDevelopmentRouteImport } from './routes/services/education-&-skills-development'
 import { Route as ServicesHealthMedicalSupportRouteImport } from './routes/services/health-medical-support'
+import { Route as ServicesHumanitarianSupportChar38PovertyAlleviationRouteImport } from './routes/services/humanitarian-support-&-poverty-alleviation'
+import { Route as ServicesWashProgramChar38ClimateChangeAwarenessRouteImport } from './routes/services/wash-program-&-climate-change-awareness'
+import { Route as ServicesYouthEmpowermentChar38CommunityDevelopmentRouteImport } from './routes/services/youth-empowerment-&-Community-development'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -59,10 +65,46 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesRouteRoute,
 } as any)
+const ServicesDisabilityCareSupportChar38RehabilitationRoute =
+  ServicesDisabilityCareSupportChar38RehabilitationRouteImport.update({
+    id: '/disability-care-support-&-rehabilitation',
+    path: '/disability-care-support-&-rehabilitation',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
+const ServicesDisasterChar38EmergencyReliefRoute =
+  ServicesDisasterChar38EmergencyReliefRouteImport.update({
+    id: '/disaster-&-emergency-relief',
+    path: '/disaster-&-emergency-relief',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
+const ServicesEducationChar38SkillsDevelopmentRoute =
+  ServicesEducationChar38SkillsDevelopmentRouteImport.update({
+    id: '/education-&-skills-development',
+    path: '/education-&-skills-development',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
 const ServicesHealthMedicalSupportRoute =
   ServicesHealthMedicalSupportRouteImport.update({
     id: '/health-medical-support',
     path: '/health-medical-support',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
+const ServicesHumanitarianSupportChar38PovertyAlleviationRoute =
+  ServicesHumanitarianSupportChar38PovertyAlleviationRouteImport.update({
+    id: '/humanitarian-support-&-poverty-alleviation',
+    path: '/humanitarian-support-&-poverty-alleviation',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
+const ServicesWashProgramChar38ClimateChangeAwarenessRoute =
+  ServicesWashProgramChar38ClimateChangeAwarenessRouteImport.update({
+    id: '/wash-program-&-climate-change-awareness',
+    path: '/wash-program-&-climate-change-awareness',
+    getParentRoute: () => ServicesRouteRoute,
+  } as any)
+const ServicesYouthEmpowermentChar38CommunityDevelopmentRoute =
+  ServicesYouthEmpowermentChar38CommunityDevelopmentRouteImport.update({
+    id: '/youth-empowerment-&-Community-development',
+    path: '/youth-empowerment-&-Community-development',
     getParentRoute: () => ServicesRouteRoute,
   } as any)
 
@@ -74,7 +116,13 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/our-works': typeof OurWorksRoute
   '/api/contact': typeof ApiContactRoute
+  '/services/disability-care-support-&-rehabilitation': typeof ServicesDisabilityCareSupportChar38RehabilitationRoute
+  '/services/disaster-&-emergency-relief': typeof ServicesDisasterChar38EmergencyReliefRoute
+  '/services/education-&-skills-development': typeof ServicesEducationChar38SkillsDevelopmentRoute
   '/services/health-medical-support': typeof ServicesHealthMedicalSupportRoute
+  '/services/humanitarian-support-&-poverty-alleviation': typeof ServicesHumanitarianSupportChar38PovertyAlleviationRoute
+  '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
+  '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -84,7 +132,13 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/our-works': typeof OurWorksRoute
   '/api/contact': typeof ApiContactRoute
+  '/services/disability-care-support-&-rehabilitation': typeof ServicesDisabilityCareSupportChar38RehabilitationRoute
+  '/services/disaster-&-emergency-relief': typeof ServicesDisasterChar38EmergencyReliefRoute
+  '/services/education-&-skills-development': typeof ServicesEducationChar38SkillsDevelopmentRoute
   '/services/health-medical-support': typeof ServicesHealthMedicalSupportRoute
+  '/services/humanitarian-support-&-poverty-alleviation': typeof ServicesHumanitarianSupportChar38PovertyAlleviationRoute
+  '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
+  '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -96,7 +150,13 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/our-works': typeof OurWorksRoute
   '/api/contact': typeof ApiContactRoute
+  '/services/disability-care-support-&-rehabilitation': typeof ServicesDisabilityCareSupportChar38RehabilitationRoute
+  '/services/disaster-&-emergency-relief': typeof ServicesDisasterChar38EmergencyReliefRoute
+  '/services/education-&-skills-development': typeof ServicesEducationChar38SkillsDevelopmentRoute
   '/services/health-medical-support': typeof ServicesHealthMedicalSupportRoute
+  '/services/humanitarian-support-&-poverty-alleviation': typeof ServicesHumanitarianSupportChar38PovertyAlleviationRoute
+  '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
+  '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -109,7 +169,13 @@ export interface FileRouteTypes {
     | '/contact'
     | '/our-works'
     | '/api/contact'
+    | '/services/disability-care-support-&-rehabilitation'
+    | '/services/disaster-&-emergency-relief'
+    | '/services/education-&-skills-development'
     | '/services/health-medical-support'
+    | '/services/humanitarian-support-&-poverty-alleviation'
+    | '/services/wash-program-&-climate-change-awareness'
+    | '/services/youth-empowerment-&-Community-development'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -119,7 +185,13 @@ export interface FileRouteTypes {
     | '/contact'
     | '/our-works'
     | '/api/contact'
+    | '/services/disability-care-support-&-rehabilitation'
+    | '/services/disaster-&-emergency-relief'
+    | '/services/education-&-skills-development'
     | '/services/health-medical-support'
+    | '/services/humanitarian-support-&-poverty-alleviation'
+    | '/services/wash-program-&-climate-change-awareness'
+    | '/services/youth-empowerment-&-Community-development'
     | '/services'
   id:
     | '__root__'
@@ -130,7 +202,13 @@ export interface FileRouteTypes {
     | '/contact'
     | '/our-works'
     | '/api/contact'
+    | '/services/disability-care-support-&-rehabilitation'
+    | '/services/disaster-&-emergency-relief'
+    | '/services/education-&-skills-development'
     | '/services/health-medical-support'
+    | '/services/humanitarian-support-&-poverty-alleviation'
+    | '/services/wash-program-&-climate-change-awareness'
+    | '/services/youth-empowerment-&-Community-development'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -202,6 +280,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof ServicesRouteRoute
     }
+    '/services/disability-care-support-&-rehabilitation': {
+      id: '/services/disability-care-support-&-rehabilitation'
+      path: '/disability-care-support-&-rehabilitation'
+      fullPath: '/services/disability-care-support-&-rehabilitation'
+      preLoaderRoute: typeof ServicesDisabilityCareSupportChar38RehabilitationRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
+    '/services/disaster-&-emergency-relief': {
+      id: '/services/disaster-&-emergency-relief'
+      path: '/disaster-&-emergency-relief'
+      fullPath: '/services/disaster-&-emergency-relief'
+      preLoaderRoute: typeof ServicesDisasterChar38EmergencyReliefRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
+    '/services/education-&-skills-development': {
+      id: '/services/education-&-skills-development'
+      path: '/education-&-skills-development'
+      fullPath: '/services/education-&-skills-development'
+      preLoaderRoute: typeof ServicesEducationChar38SkillsDevelopmentRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
     '/services/health-medical-support': {
       id: '/services/health-medical-support'
       path: '/health-medical-support'
@@ -209,16 +308,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesHealthMedicalSupportRouteImport
       parentRoute: typeof ServicesRouteRoute
     }
+    '/services/humanitarian-support-&-poverty-alleviation': {
+      id: '/services/humanitarian-support-&-poverty-alleviation'
+      path: '/humanitarian-support-&-poverty-alleviation'
+      fullPath: '/services/humanitarian-support-&-poverty-alleviation'
+      preLoaderRoute: typeof ServicesHumanitarianSupportChar38PovertyAlleviationRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
+    '/services/wash-program-&-climate-change-awareness': {
+      id: '/services/wash-program-&-climate-change-awareness'
+      path: '/wash-program-&-climate-change-awareness'
+      fullPath: '/services/wash-program-&-climate-change-awareness'
+      preLoaderRoute: typeof ServicesWashProgramChar38ClimateChangeAwarenessRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
+    '/services/youth-empowerment-&-Community-development': {
+      id: '/services/youth-empowerment-&-Community-development'
+      path: '/youth-empowerment-&-Community-development'
+      fullPath: '/services/youth-empowerment-&-Community-development'
+      preLoaderRoute: typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRouteImport
+      parentRoute: typeof ServicesRouteRoute
+    }
   }
 }
 
 interface ServicesRouteRouteChildren {
+  ServicesDisabilityCareSupportChar38RehabilitationRoute: typeof ServicesDisabilityCareSupportChar38RehabilitationRoute
+  ServicesDisasterChar38EmergencyReliefRoute: typeof ServicesDisasterChar38EmergencyReliefRoute
+  ServicesEducationChar38SkillsDevelopmentRoute: typeof ServicesEducationChar38SkillsDevelopmentRoute
   ServicesHealthMedicalSupportRoute: typeof ServicesHealthMedicalSupportRoute
+  ServicesHumanitarianSupportChar38PovertyAlleviationRoute: typeof ServicesHumanitarianSupportChar38PovertyAlleviationRoute
+  ServicesWashProgramChar38ClimateChangeAwarenessRoute: typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
+  ServicesYouthEmpowermentChar38CommunityDevelopmentRoute: typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 const ServicesRouteRouteChildren: ServicesRouteRouteChildren = {
+  ServicesDisabilityCareSupportChar38RehabilitationRoute:
+    ServicesDisabilityCareSupportChar38RehabilitationRoute,
+  ServicesDisasterChar38EmergencyReliefRoute:
+    ServicesDisasterChar38EmergencyReliefRoute,
+  ServicesEducationChar38SkillsDevelopmentRoute:
+    ServicesEducationChar38SkillsDevelopmentRoute,
   ServicesHealthMedicalSupportRoute: ServicesHealthMedicalSupportRoute,
+  ServicesHumanitarianSupportChar38PovertyAlleviationRoute:
+    ServicesHumanitarianSupportChar38PovertyAlleviationRoute,
+  ServicesWashProgramChar38ClimateChangeAwarenessRoute:
+    ServicesWashProgramChar38ClimateChangeAwarenessRoute,
+  ServicesYouthEmpowermentChar38CommunityDevelopmentRoute:
+    ServicesYouthEmpowermentChar38CommunityDevelopmentRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 

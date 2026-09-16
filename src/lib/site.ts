@@ -34,6 +34,12 @@ export const NAV = [
 
 export const SERVICE_PAGES = [
   { label: "Health & Medical Support", to: "/services/health-medical-support" },
+  { label: "Humanitarian Support & Poverty Alleviation", to: "/services/humanitarian-support-&-poverty-alleviation" },
+  { label: "Disaster & Emergency Relief" , to: "/services/disaster-&-emergency-relief"},
+  { label: "Education & Skills Development" , to: "/services/education-&-skills-development"},
+  { label: "Wash program & Climate Change Awareness" , to: "/services/wash-program-&-climate-change-awareness"},
+  { label: "Disability Care, Support & Rehabilitation" , to: "/services/disability-care-support-&-rehabilitation"},
+  { label: "Youth Empowerment & Community Development" , to: "/services/youth-empowerment-&-Community-development"},
   // add more service pages here as you create them, e.g.:
   // { label: "Food & Ration Distribution", to: "/services/food-ration-distribution" },
 ] as const;
