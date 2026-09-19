@@ -27,8 +27,8 @@ export const NAV = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
-  { label: "Our Works", to: "/our-works" },
-  { label: "Blog", to: "/blog" },
+  // { label: "Our Works", to: "/our-works" },
+  // { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
@@ -40,21 +40,19 @@ export const SERVICE_PAGES = [
   { label: "Wash program & Climate Change Awareness" , to: "/services/wash-program-&-climate-change-awareness"},
   { label: "Disability Care, Support & Rehabilitation" , to: "/services/disability-care-support-&-rehabilitation"},
   { label: "Youth Empowerment & Community Development" , to: "/services/youth-empowerment-&-Community-development"},
-  // add more service pages here as you create them, e.g.:
-  // { label: "Food & Ration Distribution", to: "/services/food-ration-distribution" },
 ] as const;
 
 export const STATS = [
-  { value: "10 years", label: "Ramandan Drive" },
-  { value: "50+", label: "Villages reached" },
-  { value: "35", label: "Rashan Distribution" },
-  { value: "900+", label: "Active volunteers" },
+  { value: "4 Years", label: "Ramandan Drive" },
+  { value: "50+", label: "Activites Completed" },
+  { value: "100+", label: "Ration Distribution" },
+  { value: "500+", label: "Active volunteers" },
 ];
 
 export const SERVICES = [
   {
     slug: "Cloth",
-    title: "Cloth & Ration Distribution",
+    title: "Health & Medical Support",
     summary:
       "Monthly ration hampers and clothing distributions to families across interior Sindh, prioritising widows, daily-wage workers and the elderly.",
     points: ["Family ration packs", "Clothing Distributions", "Door-to-door delivery in remote goths"],
@@ -126,7 +124,7 @@ export const FAQS_ORG = [
   },
   {
     q: "Who leads the foundation?",
-    a: "The foundation is led by its founding chairman together with a volunteer board of professionals, doctors and educators who serve without compensation.",
+    a: "The foundation is lead by its founding chairman together with a volunteer board of professionals, doctors and educators who serve without compensation.",
   },
   {
     q: "How are beneficiary families selected?",

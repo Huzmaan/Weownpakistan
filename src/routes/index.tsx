@@ -45,9 +45,21 @@ const HERO_SLIDES = [
   },
   {
     image: heroFood,
-    eyebrow: "Rashan Distribution Activity",
-    title: "We Own Pakistan",
-    text: "Ration hampers reaching families in interior Sindh who are usually the last on every list.",
+    eyebrow: "Ration Distribution Activity",
+    title: "Bringing Hope to Families Across Sindh",
+    text: "Supporting underserved families with food, essential supplies, and community-driven initiatives across interior Sindh.",
+  },
+  {
+    image: heroWater,
+    eyebrow: "Water relief",
+    title: "Clean water within walking distance.",
+    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+  },
+  {
+    image: heroWater,
+    eyebrow: "Water relief",
+    title: "Clean water within walking distance.",
+    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
   },
   {
     image: heroWater,
@@ -59,9 +71,9 @@ const HERO_SLIDES = [
 
 const WORKS = [
   { image: workClothing, title: "Monthly clothing distribution", place: "Hyderabad, Sindh", meta: "420 families served" },
-  { image: workEidMeal, title: "Eid gift & meal packs", place: "Tharparkar", meta: "1,100 children" },
+  { image: workEidMeal, title: "Eid gift & meal packs", place: "Karachi", meta: "1,100 children" },
   { image: workMedical, title: "Free medical camp", place: "Thatta, Sindh", meta: "312 patients treated" },
-  { image: workYouth, title: "Youth motivational seminar", place: "Hyderabad", meta: "600+ students" },
+  { image: workYouth, title: "Youth motivational seminar", place: "Karachi", meta: "600+ students" },
 ];
 
 function Home() {
@@ -152,7 +164,7 @@ function Home() {
                 "Volunteer-led, low overhead",
                 "Documented beneficiary registers",
                 "Zakat kept in a separate pool",
-                "Present in 120+ villages",
+                "Present in 100+ Ration Distribution",
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm font-medium text-foreground/85">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />

@@ -85,21 +85,14 @@ function About() {
               <Target className="h-6 w-6" aria-hidden="true" />
             </span>
             <h2 className="mt-7 font-display text-2xl font-bold">Our Mission</h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              To deliver dignified, transparent and continuous welfare support food, clean water, healthcare and
-              education to the most underserved communities of Sindh, and to prove with documentation that every
-              contribution reached a real household.
-            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">To inspire, mobilize, and empower individuals and communities to serve those in need with compassion, dedication, honesty, and integrity.</p>
           </article>
           <article className="reveal rounded-[2rem] bg-card p-10 shadow-soft">
             <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold text-gold-foreground">
               <Eye className="h-6 w-6" aria-hidden="true" />
             </span>
             <h2 className="mt-7 font-display text-2xl font-bold">Our Vision</h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              A Pakistan where no family goes without a meal, no village walks kilometres for water, and every young
-              person has a mentor and a skill a country its own citizens take responsibility for.
-            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">A Pakistan where every citizen believes that helping those in need is not an act of charity but a shared responsibility.</p>
           </article>
         </div>
       </section>

@@ -104,7 +104,7 @@ function Blog() {
       </section>
 
       {/* Newsletter */}
-      <section className="container-wopf pb-24">
+      {/* <section className="container-wopf pb-24">
         <div className="surface-brand reveal grid gap-8 rounded-[2.5rem] p-10 shadow-lift lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-14">
           <div>
             <h2 className="text-3xl font-bold leading-tight sm:text-4xl">Get the monthly field report</h2>
@@ -131,7 +131,7 @@ function Blog() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* <DonateSection /> */}
     </SiteLayout>
