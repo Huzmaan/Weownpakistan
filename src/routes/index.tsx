@@ -7,9 +7,11 @@ import { TestimonialsSection } from "@/components/site/TestimonialsSection";
 import { FaqSection } from "@/components/site/FaqSection";
 import { DonateSection } from "@/components/site/DonateSection";
 import { FAQS_GENERAL, SERVICES, SITE } from "@/lib/site";
-import heroFood from "@/assets/our-works/orphange/001.jpeg";
+import heroFood from "@/assets//ration-distribution.jpg";
 import heroIftar from "@/assets/our-works/ramdan-drive/005.jpeg";
 import heroWater from "@/assets/hero-water.jpg";
+import healthBanner from "@/assets/health-banner.jpg";
+import communityBanner from "@/assets/community-banner.jpeg";
 import workYouth from "@/assets/work-youth.jpg";
 import workMedical from "@/assets/work-medical.jpg";
 import workClothing from "@/assets/our-works/orphange/007.jpeg";
@@ -50,10 +52,10 @@ const HERO_SLIDES = [
     text: "Supporting underserved families with food, essential supplies, and community-driven initiatives across interior Sindh.",
   },
   {
-    image: heroWater,
-    eyebrow: "Water relief",
-    title: "Clean water within walking distance.",
-    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+    image: communityBanner,
+    eyebrow: "Community welfare",
+    title: "Every family deserves a little more room to hope.",
+    text: "Practical support delivered by volunteers who know the communities they serve.",
   },
   {
     image: heroWater,
@@ -62,10 +64,10 @@ const HERO_SLIDES = [
     text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
   },
   {
-    image: heroWater,
-    eyebrow: "Water relief",
-    title: "Clean water within walking distance.",
-    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+    image: healthBanner,
+    eyebrow: "Healthcare Support",
+    title: "Care that travels closer to people.",
+    text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
   },
 ];
 

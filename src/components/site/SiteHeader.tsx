@@ -16,7 +16,7 @@ export function SiteHeader() {
     >
       <div className="container-wopf flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo  } alt={`${SITE.name} emblem`} width={56} height={56} className="h-12 w-12 object-contain" />
+          <img src={logo} alt={`${SITE.name} emblem`} width={56} height={56} className="h-12 w-12 object-contain" />
           <span className="leading-tight">
             <span className="block font-display text-base font-bold tracking-tight text-primary-deep">WOPF</span>
             <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:block">
@@ -75,14 +75,7 @@ export function SiteHeader() {
             <HandHeart className="h-4 w-4" aria-hidden="true" />
             Get Involved
           </Link>
-          <Link
-            to="/"
-            hash="donate"
-            className="surface-brand inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform hover:-translate-y-0.5"
-          >
-            <Heart className="h-4 w-4" aria-hidden="true" />
-            Donate Now
-          </Link>
+          <a href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="surface-brand inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold shadow-soft transition-transform hover:-translate-y-0.5">Call Now</a>
         </div>
 
         <button

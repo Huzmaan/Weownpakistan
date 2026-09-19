@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout, SectionHeading, PageBanner } from "@/components/site/SiteLayout";
 import { DonateSection } from "@/components/site/DonateSection";
-import { SERVICES , SITE } from "@/lib/site";
+import { SERVICES, SITE } from "@/lib/site";
 import heroFood from "@/assets/our-works/orphange/006.jpeg";
 import heroIftar from "@/assets/our-works/ramdan-drive/008.jpeg";
 import heroWater from "@/assets/hero-water.jpg";
@@ -51,7 +51,7 @@ function Services() {
       <section className="container-wopf py-24 lg:py-32">
         <SectionHeading
           eyebrow="Program detail"
-          title="Six initiatives running across Sindh, all year."
+          title="Seven initiatives running across Sindh, all year."
           align="center"
         />
 
@@ -59,9 +59,8 @@ function Services() {
           {SERVICES.map((service, i) => (
             <article
               key={service.slug}
-              className={`reveal grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16 ${
-                i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
-              }`}
+              className={`reveal grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16 ${i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
+                }`}
             >
               <figure className="relative">
                 <img
@@ -73,7 +72,7 @@ function Services() {
                   className="h-[420px] w-full rounded-[2rem] object-cover shadow-lift"
                 />
                 <figcaption className="absolute left-6 top-6 rounded-full bg-card/95 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-primary-deep backdrop-blur">
-                  0{i + 1} — {service.slug}
+                  0{i + 1} — {service.title}
                 </figcaption>
               </figure>
 
@@ -92,12 +91,9 @@ function Services() {
                   ))}
                 </ul>
                 <div className="mt-9 flex flex-wrap gap-3">
-                  <a
-                    href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                    className="surface-brand inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-transform hover:-translate-y-0.5"
-                  >
-                    Call Now <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </a>
+                  <Link to={service.button} className="surface-brand inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-transform hover:-translate-y-0.5">
+                    Learn More <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
                   <Link
                     to="/contact"
                     className="inline-flex items-center rounded-full border border-primary/25 px-6 py-3.5 text-sm font-bold text-primary-deep transition-colors hover:bg-primary-soft"

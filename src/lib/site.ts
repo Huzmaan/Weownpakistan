@@ -53,41 +53,55 @@ export const SERVICES = [
   {
     slug: "Cloth",
     title: "Health & Medical Support",
+    button: "/services/health-medical-support",
     summary:
       "Monthly ration hampers and clothing distributions to families across interior Sindh, prioritising widows, daily-wage workers and the elderly.",
     points: ["Family ration packs", "Clothing Distributions", "Door-to-door delivery in remote goths"],
   },
   {
     slug: "iftar",
-    title: "Ramadan Iftar Drive",
+    title: "Humanitarian Support & Poverty Alleviation",
+    button: "/services/humanitarian-support-&-poverty-alleviation",
     summary:
       "Community Iftar dastarkhwans and Sehri boxes throughout Ramadan, plus Eid gift packs so no child is left out of the celebration.",
     points: ["Street Iftar dastarkhwan", "Sehri boxes", "Eid clothing & gifts"],
   },
   {
     slug: "welfare",
-    title: "Community Welfare",
+    title: "Disaster & Emergency Relief",
+    button: "/services/disaster-&-emergency-relief",
     summary:
       "Emergency support for families in crisis flood relief, winter blankets, school kits and one-off dignity grants.",
     points: ["Flood & disaster relief", "Winter blanket drive", "School kits for children"],
   },
   {
     slug: "water",
-    title: "Water Relief in Scarcity Zones",
+    title: "Education & Skills Development",
+    button: "/services/education-&-skills-development",
     summary:
       "Clean drinking water for drought-hit belts of Thar and Tharparkar through hand pumps, water coolers and tanker rotations.",
     points: ["Hand pump installation", "Water tanker rotation", "Cooler plants at schools"],
   },
   {
     slug: "youth",
-    title: "Youth Awareness & Skills",
+    title: "Wash program & Climate Change Awareness",
+    button: "/services/wash-program-&-climate-change-awareness",
     summary:
       "Motivational sessions, career counselling and short skill courses that turn young people into the workforce their district needs.",
     points: ["School & college seminars", "Skill workshops", "Volunteer leadership program"],
   },
   {
     slug: "medical",
-    title: "Free Medical Camps",
+    title: "Disability Care, Support & Rehabilitation",
+    button: "/services/disability-care-support-&-rehabilitation",
+    summary:
+      "Doctors, screening and free medicine brought to villages with no clinic within reach, including eye and maternal health days.",
+    points: ["General & eye screening", "Free medicine counters", "Follow-up referrals"],
+  },
+  {
+    slug: "youth",
+    title: "Youth Empowerment & Community Development",
+    button: "/services/youth-empowerment-&-Community-development",
     summary:
       "Doctors, screening and free medicine brought to villages with no clinic within reach, including eye and maternal health days.",
     points: ["General & eye screening", "Free medicine counters", "Follow-up referrals"],

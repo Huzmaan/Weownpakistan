@@ -60,7 +60,7 @@ function About() {
               </p>
             </div>
             <Link
-              to="/our-works"
+              to="/services"
               className="reveal mt-9 inline-flex items-center gap-2 text-sm font-bold text-primary-deep transition-all hover:gap-3"
             >
               See the projects behind the story <ArrowRight className="h-4 w-4" aria-hidden="true" />
