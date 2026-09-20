@@ -45,12 +45,11 @@ function About() {
           <div>
             <SectionHeading
               eyebrow="Our story"
-              title="Our journey has always remained connected with the people we serve."
+              title="A Foundation Built By People Who Chose To Help"
               intro="We Own Pakistan Foundation was established in 2016 in Karachi by Founder and Chairman Nadir Abbas along with a group of dedicated volunteers who believed that communities can create solutions when people come together."
             />
             <div className="reveal mt-6 space-y-5 leading-relaxed text-muted-foreground">
               <p>What started as a small ration distribution activity has grown into a wider welfare initiative supporting communities through food assistance, healthcare activities, water projects, youth programs, and emergency support.</p>
-              <p>Our journey has always remained connected with the people we serve.</p>
               <p>We do not believe in helping from a distance. Our volunteers work directly with communities, understand their challenges, and provide support according to their needs.</p>
             </div>
             <Link

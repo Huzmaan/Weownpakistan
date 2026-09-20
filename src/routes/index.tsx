@@ -112,10 +112,10 @@ function Home() {
                       Call Now  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </a>
                     <Link
-                      to="/our-works"
+                      to="/services"
                       className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/25 bg-ink-foreground/5 px-7 py-4 text-sm font-bold text-ink-foreground backdrop-blur transition-colors hover:bg-ink-foreground/15"
                     >
-                      See our work
+                      Our Services
                     </Link>
                   </div>
                   <p className="mt-8 font-display text-sm text-gold/90 text-end" lang="ur" dir="rtl">
@@ -154,19 +154,14 @@ function Home() {
             <SectionHeading
               eyebrow="About WOPF"
               title="A foundation built by neighbours, not by outsiders."
-              intro="We Own Pakistan Foundation was established in 2016 in Karachi by founding chairman Nadir Abbas and a small group of volunteers who were tired of waiting for someone else to act. What began as a single ration drive is now a year-round welfare operation across Sindh."
+              intro="The We Own Pakistan Foundation was founded in 2016, co-initiated by Nadir Abbas and a group of close-knit friends in Karachi. The original idea that brought this group together to launch this initiative was simply that they grew tired of waiting painfully long for external aid. Unwilling to sit around waiting for others to come to their rescue, they gritted their teeth and took matters into their own hands to deliver tangible help to people in need around them. Their very first step was nothing more than a time-pressed emergency operation: carrying supply rations, they knocked on doors from household to household, delivering food rations to those who needed them. No one could have predicted that starting from this small act, the tiny initiative launched by just a few people back then would grow into today’s welfare network covering communities across Sindh, operating nonstop all year round."
             />
-            <p className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
-              Our mission is simple: restore dignity through direct, verifiable help. We work where the roads end the
-              goths, the desert settlements, the neighbourhoods that never make the news and we stay in touch with the
-              same families year after year.
-            </p>
             <ul className="reveal mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                "Volunteer-led, low overhead",
-                "Documented beneficiary registers",
-                "Zakat kept in a separate pool",
-                "Present in 100+ Ration Distribution",
+                "100% volunteer-driven, with minimal administrative overhead",
+                "Fully documented and traceable beneficiary records",
+                "Strictly segregated accounts for transparent and verified Zakat tracking",
+                "Active presence across 100+ distribution centers, with direct, on-ground operations",
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm font-medium text-foreground/85">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
@@ -189,7 +184,7 @@ function Home() {
         <div className="container-wopf">
           <SectionHeading
             eyebrow="What we do"
-            title="Focused initiatives built for long-term community impact."
+            title="Focused initiatives built for long term community impact."
             intro="Active programs managed by local coordinators to deliver immediate relief and continuous development."
             align="center"
           />
@@ -251,7 +246,7 @@ function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading eyebrow="Our works" title="Recent drives, documented as they happened." />
           <Link
-            to="/our-works"
+            to="/services"
             className="reveal inline-flex items-center gap-2 rounded-full border border-primary/25 px-6 py-3 text-sm font-bold text-primary-deep transition-colors hover:bg-primary-soft"
           >
             View all projects <ArrowRight className="h-4 w-4" aria-hidden="true" />
