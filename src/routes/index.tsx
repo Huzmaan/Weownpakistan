@@ -189,8 +189,8 @@ function Home() {
         <div className="container-wopf">
           <SectionHeading
             eyebrow="What we do"
-            title="Six programs, one promise: help that actually arrives."
-            intro="Each program runs on its own calendar with dedicated field coordinators, so support is continuous rather than seasonal."
+            title="Focused initiatives built for long-term community impact."
+            intro="Active programs managed by local coordinators to deliver immediate relief and continuous development."
             align="center"
           />
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

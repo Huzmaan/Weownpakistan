@@ -54,57 +54,54 @@ export const SERVICES = [
     slug: "Cloth",
     title: "Health & Medical Support",
     button: "/services/health-medical-support",
-    summary:
-      "Monthly ration hampers and clothing distributions to families across interior Sindh, prioritising widows, daily-wage workers and the elderly.",
-    points: ["Family ration packs", "Clothing Distributions", "Door-to-door delivery in remote goths"],
+    summary: "Providing basic healthcare, free consultations, and life-saving medicines to underserved families and rural communities across Sindh.",
+    points: ["Free medical camps & eye screening", "Essential medicines & diagnostic support", "Maternal care & basic health awareness"],
   },
   {
     slug: "iftar",
     title: "Humanitarian Support & Poverty Alleviation",
     button: "/services/humanitarian-support-&-poverty-alleviation",
-    summary:
-      "Community Iftar dastarkhwans and Sehri boxes throughout Ramadan, plus Eid gift packs so no child is left out of the celebration.",
-    points: ["Street Iftar dastarkhwan", "Sehri boxes", "Eid clothing & gifts"],
+    summary: "Distributing essential monthly groceries, warm clothing, and seasonal assistance to widows, daily-wage earners, and struggling households.",
+    points: ["Monthly family ration packs", "Seasonal clothing & winter blankets", "Ramadan & Eid relief packages"],
   },
   {
     slug: "welfare",
     title: "Disaster & Emergency Relief",
     button: "/services/disaster-&-emergency-relief",
-    summary:
-      "Emergency support for families in crisis flood relief, winter blankets, school kits and one-off dignity grants.",
-    points: ["Flood & disaster relief", "Winter blanket drive", "School kits for children"],
+    summary: "Delivering immediate emergency aid, food, and temporary shelter to families affected by floods, harsh weather, and sudden crises.",
+    points: ["Emergency food & clean water kits", "Flood response & temporary shelter aid", "Post-disaster rehabilitation support"],
   },
   {
     slug: "water",
     title: "Education & Skills Development",
     button: "/services/education-&-skills-development",
     summary:
-      "Clean drinking water for drought-hit belts of Thar and Tharparkar through hand pumps, water coolers and tanker rotations.",
-    points: ["Hand pump installation", "Water tanker rotation", "Cooler plants at schools"],
+      "Empowering young minds with basic schooling, career guidance, and practical technical skills to build sustainable livelihoods.",
+    points: ["School fee support & stationery distribution", "Basic vocational & digital skills training", "Youth mentoring & career counseling"],
   },
   {
     slug: "youth",
     title: "Wash program & Climate Change Awareness",
     button: "/services/wash-program-&-climate-change-awareness",
     summary:
-      "Motivational sessions, career counselling and short skill courses that turn young people into the workforce their district needs.",
-    points: ["School & college seminars", "Skill workshops", "Volunteer leadership program"],
+      "Installing clean drinking water facilities in drought-prone regions and spreading practical awareness about water hygiene and environmental protection.",
+    points: ["Hand pump & filtration unit installation", "Water tanker supply in remote areas", "Tree plantation & climate awareness drives"],
   },
   {
     slug: "medical",
     title: "Disability Care, Support & Rehabilitation",
     button: "/services/disability-care-support-&-rehabilitation",
     summary:
-      "Doctors, screening and free medicine brought to villages with no clinic within reach, including eye and maternal health days.",
-    points: ["General & eye screening", "Free medicine counters", "Follow-up referrals"],
+      "Assisting individuals with special needs by offering mobility equipment, therapy referrals, and social inclusion opportunities.",
+    points: ["Wheelchairs & mobility aid distribution", "Rehabilitation guidance & support", "Family assistance for special needs care"],
   },
   {
-    slug: "youth",
-    title: "Youth Empowerment & Community Development",
-    button: "/services/youth-empowerment-&-Community-development",
-    summary:
-      "Doctors, screening and free medicine brought to villages with no clinic within reach, including eye and maternal health days.",
-    points: ["General & eye screening", "Free medicine counters", "Follow-up referrals"],
+  slug: "youth",
+  title: "Youth Empowerment & Community Development",
+  button: "/services/youth-empowerment-&-Community-development",
+  summary:
+    "Engaging youth through leadership programs, skill workshops, and active community development projects for a better future.",
+  points: ["Youth leadership & mentoring", "Skill-building workshops", "Community engagement drives"],
   },
 ];
 
@@ -133,20 +130,20 @@ export const FAQS_GENERAL = [
 
 export const FAQS_ORG = [
   {
-    q: "Is WOPF a registered organisation?",
-    a: "WOPF operates as a registered non-profit welfare organisation with a governing body, documented accounts and an annual review of every project.",
+    q: "Is WOPF a registered non-profit organisation?",
+    a: "Yes, We Own Pakistan Foundation (WOPF) is a fully registered non-profit organisation operating in compliance with local regulations and welfare standards.",
   },
   {
-    q: "Who leads the foundation?",
-    a: "The foundation is lead by its founding chairman together with a volunteer board of professionals, doctors and educators who serve without compensation.",
+    q: "How are beneficiary families selected for support?",
+    a: "Our field team conducts thorough ground checks and verification processes to identify and prioritise deserving families based on merit, need, and urgency.",
   },
   {
-    q: "How are beneficiary families selected?",
-    a: "Local coordinators survey each area, verify household income and family size, and maintain a register so support reaches the same families consistently.",
+    q: "How can I track where my donation is being used?",
+    a: "We maintain complete financial transparency. Regular project updates, impact reports, and media proof are shared on our platform and sent directly to our donors.",
   },
   {
-    q: "Can organisations partner with WOPF?",
-    a: "Yes corporates, schools and other welfare bodies regularly co-host camps and drives with us. Reach out through the contact page to discuss a partnership.",
+    q: "What types of projects does WOPF focus on?",
+    a: "We focus on sustainable community development, disaster relief, education, clean water initiatives, and healthcare support for underprivileged communities across Pakistan.",
   },
 ];
 

@@ -45,19 +45,13 @@ function About() {
           <div>
             <SectionHeading
               eyebrow="Our story"
-              title="From a single ration drive to a province-wide operation."
-              intro="In 2016, founding chairman Nadir Abbas and a handful of friends in Karachi pooled their own money to deliver ration bags to forty families. Word travelled, volunteers arrived, and within a year the group was registered as We Own Pakistan Foundation."
+              title="Our journey has always remained connected with the people we serve."
+              intro="We Own Pakistan Foundation was established in 2016 in Karachi by Founder and Chairman Nadir Abbas along with a group of dedicated volunteers who believed that communities can create solutions when people come together."
             />
             <div className="reveal mt-6 space-y-5 leading-relaxed text-muted-foreground">
-              <p>
-                Today WOPF runs food distribution, Ramadan Iftar drives, water relief in drought-hit districts, free
-                medical camps and youth development sessions. The board is unpaid; almost every hand on the ground is a
-                volunteer who lives in the community being served.
-              </p>
-              <p>
-                We keep our promises small and verifiable: a register of names, a photograph of every distribution, and
-                a phone number families can call. That is the standard we hold ourselves to, drive after drive.
-              </p>
+              <p>What started as a small ration distribution activity has grown into a wider welfare initiative supporting communities through food assistance, healthcare activities, water projects, youth programs, and emergency support.</p>
+              <p>Our journey has always remained connected with the people we serve.</p>
+              <p>We do not believe in helping from a distance. Our volunteers work directly with communities, understand their challenges, and provide support according to their needs.</p>
             </div>
             <Link
               to="/services"
@@ -101,8 +95,8 @@ function About() {
       <section className="container-wopf py-24 lg:py-32">
         <SectionHeading
           eyebrow="Our team"
-          title="The people who answer the phone at 6 a.m."
-          intro="A volunteer board of professionals, doctors and educators who serve without compensation."
+          title="The Hands and Hearts Behind Our Mission"
+          intro="A volunteer network of dedicated professionals committed to making a lasting difference across Pakistan."
           align="center"
         />
         <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -129,8 +123,8 @@ function About() {
       <FaqSection
         items={FAQS_ORG}
         eyebrow="Organisation FAQ"
-        title="How the foundation is run"
-        intro="Governance, selection criteria and partnerships the questions donors and partners ask us most."
+        title="How the foundation operates"
+        intro="Frequently asked questions about our governance, transparency, and donation impact."
       />
       {/* <DonateSection /> */}
     </SiteLayout>

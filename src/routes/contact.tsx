@@ -218,11 +218,11 @@ function Contact() {
                   name="subject"
                   className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/25"
                 >
-                  <option>Volunteer with a drive</option>
+                  <option>Request financial or medical support</option>
                   <option>Donate or ask about Zakat</option>
-                  <option>Partner with the foundation</option>
                   <option>Report a family in need</option>
-                  <option>Something else</option>
+                  <option>Sponsor a project or initiative</option>
+                  <option>General Inquiry / Other</option>
                 </select>
               </div>
 
