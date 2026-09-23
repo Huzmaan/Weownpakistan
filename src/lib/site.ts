@@ -12,7 +12,7 @@ import huzmaanPasta from "@/assets/team-members/huzmaanpasta.jpg";
  */
 
 export const SITE = {
-  name: "We Own Pakistan Foundation",
+  name: "We Own Pakistan Humanitarian and Welfare Foundation",
   short: "WOPF",
   tagline: "یہ وطن ہمارا ہے، ہم ہیں پاسباں اس کے",
   facebook: "https://www.facebook.com/wopfofficial/",
@@ -107,7 +107,7 @@ export const SERVICES = [
 
 export const FAQS_GENERAL = [
   {
-    q: "Where does We Own Pakistan Foundation work?",
+    q: "Where does We Own Pakistan Humanitarian and Welfare Foundation work?",
     a: "Our field teams operate across Sindh Karachi, Hyderabad, Dadu, Thatta and the drought-affected belts of Tharparkar with volunteer chapters growing in other provinces.",
   },
   {
@@ -131,7 +131,7 @@ export const FAQS_GENERAL = [
 export const FAQS_ORG = [
   {
     q: "Is WOPF a registered non-profit organisation?",
-    a: "Yes, We Own Pakistan Foundation (WOPF) is a fully registered non-profit organisation operating in compliance with local regulations and welfare standards.",
+    a: "Yes, We Own Pakistan Humanitarian and Welfare Foundation (WOPF) is a fully registered non-profit organisation operating in compliance with local regulations and welfare standards.",
   },
   {
     q: "How are beneficiary families selected for support?",

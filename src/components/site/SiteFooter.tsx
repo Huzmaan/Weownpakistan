@@ -15,7 +15,7 @@ export function SiteFooter() {
             <span className="font-display text-lg font-bold">WOPF</span>
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
-            We Own Pakistan Foundation is a volunteer-driven welfare organisation serving communities across Sindh with
+            We Own Pakistan Humanitarian and Welfare Foundation is a volunteer-driven welfare organisation serving communities across Sindh with
             food, water, health and youth programs.
           </p>
           <p className="mt-4 font-display text-sm text-gold" lang="ur" dir="rtl">
@@ -99,7 +99,7 @@ export function SiteFooter() {
 
       <div className="border-t border-ink-foreground/10">
         <div className="container-wopf flex flex-col gap-2 py-6 text-xs text-ink-foreground/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} We Own Pakistan Foundation. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} We Own Pakistan Humanitarian and Welfare Foundation. All rights reserved.</p>
           <p>Registered non-profit welfare organisation Sindh, Pakistan.</p>
         </div>
       </div>

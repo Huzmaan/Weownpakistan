@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "We Own Pakistan Foundation | Welfare Across Sindh" },
+      { title: "We Own Pakistan Humanitarian and Welfare Foundation | Welfare Across Sindh" },
       {
         name: "description",
         content:
           "WOPF is a volunteer-led welfare foundation serving Sindh with food distribution, Ramadan Iftar drives, clean water, medical camps and youth programs.",
       },
-      { name: "author", content: "We Own Pakistan Foundation" },
-      { property: "og:title", content: "We Own Pakistan Foundation" },
+      { name: "author", content: "We Own Pakistan Humanitarian and Welfare Foundation" },
+      { property: "og:title", content: "We Own Pakistan Humanitarian and Welfare Foundation" },
       {
         property: "og:description",
         content: "Food, water, health and youth welfare programs across Sindh, Pakistan.",

@@ -14,7 +14,7 @@ import workRation from "@/assets/our-works/orphange/008.jpeg";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog & Field Notes | We Own Pakistan Foundation" },
+      { title: "Blog & Field Notes | We Own Pakistan Humanitarian and Welfare Foundation" },
       {
         name: "description",
         content:
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/blog")({
       { property: "og:title", content: "WOPF Blog Field Notes from Sindh" },
       {
         property: "og:description",
-        content: "Stories, drive reports and transparency updates from We Own Pakistan Foundation.",
+        content: "Stories, drive reports and transparency updates from We Own Pakistan Humanitarian and Welfare Foundation.",
       },
     ],
   }),

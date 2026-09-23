@@ -7,7 +7,7 @@ import {
   PageBanner,
 } from "@/components/site/SiteLayout";
 import { SITE } from "@/lib/site";
-import heroWater from "@/assets/hero-water.jpg";
+import contactBanner from "@/assets/contact-banner.jpeg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -16,11 +16,11 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with We Own Pakistan Foundation in Karachi volunteer with a drive, partner on a camp, or ask about donations and Zakat.",
+          "Get in touch with We Own Pakistan Humanitarian and Welfare Foundation in Karachi volunteer with a drive, partner on a camp, or ask about donations and Zakat.",
       },
       {
         property: "og:title",
-        content: "Contact We Own Pakistan Foundation",
+        content: "Contact We Own Pakistan Humanitarian and Welfare Foundation",
       },
       {
         property: "og:description",
@@ -115,7 +115,7 @@ function Contact() {
         eyebrow="Contact"
         title="Talk to the team or join it."
         intro="Volunteer for a drive, propose a partnership, or ask anything about how donations are used."
-        image={heroWater}
+        image={contactBanner}
       />
 
       <section className="container-wopf py-24 lg:py-32">

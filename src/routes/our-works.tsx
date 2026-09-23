@@ -32,7 +32,7 @@ export const Route = createFileRoute("/our-works")({
       { property: "og:title", content: "WOPF Our Works Completed Projects" },
       {
         property: "og:description",
-        content: "Documented welfare projects delivered by We Own Pakistan Foundation across Sindh.",
+        content: "Documented welfare projects delivered by We Own Pakistan Humanitarian and Welfare Foundation across Sindh.",
       },
     ],
   }),

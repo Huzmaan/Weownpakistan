@@ -15,19 +15,20 @@ import communityBanner from "@/assets/community-banner.jpeg";
 import workYouth from "@/assets/work-youth.jpg";
 import workMedical from "@/assets/work-medical.jpg";
 import workClothing from "@/assets/our-works/orphange/007.jpeg";
+import rationDistributionImage from "@/assets/ration-distribution-image.jpg"
 import workEidMeal from "@/assets/our-works/orphange/002.jpeg";
 import workChildren from "@/assets/our-works/events/006.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "We Own Pakistan Foundation | Welfare Across Sindh" },
+      { title: "We Own Pakistan Humanitarian and Welfare Foundation | Welfare Across Sindh" },
       {
         name: "description",
         content:
           "WOPF is a volunteer-led welfare foundation serving Sindh with food distribution, Ramadan Iftar drives, clean water, medical camps and youth programs.",
       },
-      { property: "og:title", content: "We Own Pakistan Foundation | Welfare Across Sindh" },
+      { property: "og:title", content: "We Own Pakistan Humanitarian and Welfare Foundation | Welfare Across Sindh" },
       {
         property: "og:description",
         content: "Food, water, health and youth programs delivered to communities across Sindh, Pakistan.",
@@ -57,24 +58,24 @@ const HERO_SLIDES = [
     title: "Every family deserves a little more room to hope.",
     text: "Practical support delivered by volunteers who know the communities they serve.",
   },
-  {
-    image: heroWater,
-    eyebrow: "Water relief",
-    title: "Clean water within walking distance.",
-    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
-  },
-  {
-    image: healthBanner,
-    eyebrow: "Healthcare Support",
-    title: "Care that travels closer to people.",
-    text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
-  },
+  // {
+  //   image: heroWater,
+  //   eyebrow: "Water relief",
+  //   title: "Clean water within walking distance.",
+  //   text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+  // },
+  // {
+  //   image: healthBanner,
+  //   eyebrow: "Healthcare Support",
+  //   title: "Care that travels closer to people.",
+  //   text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
+  // },
 ];
 
 const WORKS = [
-  { image: workClothing, title: "Monthly clothing distribution", place: "Hyderabad, Sindh", meta: "420 families served" },
+  { image: rationDistributionImage, title: "Monthly Rashan Distribution", place: "Muzaffarabad, Punjab", meta: "420 families served" },
   { image: workEidMeal, title: "Eid gift & meal packs", place: "Karachi", meta: "1,100 children" },
-  { image: workMedical, title: "Free medical camp", place: "Thatta, Sindh", meta: "312 patients treated" },
+  // { image: workMedical, title: "Free medical camp", place: "Thatta, Sindh", meta: "312 patients treated" },
   { image: workYouth, title: "Youth motivational seminar", place: "Karachi", meta: "600+ students" },
 ];
 
@@ -154,7 +155,7 @@ function Home() {
             <SectionHeading
               eyebrow="About WOPF"
               title="A foundation built by neighbours, not by outsiders."
-              intro="The We Own Pakistan Foundation was founded in 2016, co-initiated by Nadir Abbas and a group of close-knit friends in Karachi. The original idea that brought this group together to launch this initiative was simply that they grew tired of waiting painfully long for external aid. Unwilling to sit around waiting for others to come to their rescue, they gritted their teeth and took matters into their own hands to deliver tangible help to people in need around them. Their very first step was nothing more than a time-pressed emergency operation: carrying supply rations, they knocked on doors from household to household, delivering food rations to those who needed them. No one could have predicted that starting from this small act, the tiny initiative launched by just a few people back then would grow into today’s welfare network covering communities across Sindh, operating nonstop all year round."
+              intro="The We Own Pakistan Humanitarian and Welfare Foundation was founded in 2016, co-initiated by Nadir Abbas and a group of close-knit friends in Karachi. The original idea that brought this group together to launch this initiative was simply that they grew tired of waiting painfully long for external aid. Unwilling to sit around waiting for others to come to their rescue, they gritted their teeth and took matters into their own hands to deliver tangible help to people in need around them. Their very first step was nothing more than a time-pressed emergency operation: carrying supply rations, they knocked on doors from household to household, delivering food rations to those who needed them. No one could have predicted that starting from this small act, the tiny initiative launched by just a few people back then would grow into today’s welfare network covering communities across Sindh, operating nonstop all year round."
             />
             <ul className="reveal mt-8 grid gap-4 sm:grid-cols-2">
               {[

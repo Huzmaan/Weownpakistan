@@ -20,7 +20,7 @@ export function SiteHeader() {
           <span className="leading-tight">
             <span className="block font-display text-base font-bold tracking-tight text-primary-deep">WOPF</span>
             <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:block">
-              We Own Pakistan Foundation
+              We Own Pakistan Humanitarian and Welfare Foundation
             </span>
           </span>
         </Link>

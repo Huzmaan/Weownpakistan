@@ -5,7 +5,7 @@ import { FaqSection } from "@/components/site/FaqSection";
 import { DonateSection } from "@/components/site/DonateSection";
 import { StatsBand } from "@/components/site/StatsBand";
 import { FAQS_ORG, TEAM } from "@/lib/site";
-import heroIftar from "@/assets/our-works/ramdan-drive/005.jpeg";
+import aboutbaner from "@/assets/about-banner.jpg";
 import workRation from "@/assets/our-works/orphange/005.jpeg";
 
 export const Route = createFileRoute("/about")({
@@ -15,9 +15,9 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Founded in 2016 in Karachi, We Own Pakistan Foundation delivers food, water, healthcare and youth programs across Sindh. Meet the mission, vision and team.",
+          "Founded in 2016 in Karachi, We Own Pakistan Humanitarian and Welfare Foundation delivers food, water, healthcare and youth programs across Sindh. Meet the mission, vision and team.",
       },
-      { property: "og:title", content: "About We Own Pakistan Foundation" },
+      { property: "og:title", content: "About We Own Pakistan Humanitarian and Welfare Foundation" },
       {
         property: "og:description",
         content: "The story, mission, vision and team behind WOPF's welfare work in Sindh.",
@@ -33,8 +33,8 @@ function About() {
       <PageBanner
         eyebrow="About us"
         title="Ordinary people, organised well, refusing to look away."
-        intro="We Own Pakistan Foundation began with one ration drive in 2016 and grew into a year-round welfare network across Sindh."
-        image={heroIftar}
+        intro="We Own Pakistan Humanitarian and Welfare Foundation began with one ration drive in 2016 and grew into a year-round welfare network across Sindh."
+        image={aboutbaner}
       />
 
       <StatsBand />
@@ -46,7 +46,7 @@ function About() {
             <SectionHeading
               eyebrow="Our story"
               title="A Foundation Built By People Who Chose To Help"
-              intro="We Own Pakistan Foundation was established in 2016 in Karachi by Founder and Chairman Nadir Abbas along with a group of dedicated volunteers who believed that communities can create solutions when people come together."
+              intro="We Own Pakistan Humanitarian and Welfare Foundation was established in 2016 in Karachi by Founder and Chairman Nadir Abbas along with a group of dedicated volunteers who believed that communities can create solutions when people come together."
             />
             <div className="reveal mt-6 space-y-5 leading-relaxed text-muted-foreground">
               <p>What started as a small ration distribution activity has grown into a wider welfare initiative supporting communities through food assistance, healthcare activities, water projects, youth programs, and emergency support.</p>
@@ -106,7 +106,7 @@ function About() {
             >
               <img
                 src={member.image}
-                alt={`${member.name}, ${member.role} at We Own Pakistan Foundation`}
+                alt={`${member.name}, ${member.role} at We Own Pakistan Humanitarian and Welfare Foundation`}
                 loading="lazy"
                 // width={640}
                 // height={640}
