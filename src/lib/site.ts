@@ -96,7 +96,7 @@ export const SERVICES = [
     points: ["Wheelchairs & mobility aid distribution", "Rehabilitation guidance & support", "Family assistance for special needs care"],
   },
   {
-  slug: "youth",
+  slug: "workYouth",
   title: "Youth Empowerment & Community Development",
   button: "/services/youth-empowerment-&-Community-development",
   summary:

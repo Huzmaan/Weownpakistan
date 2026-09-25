@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionHeading } from "@/components/site/SiteLayout";
 import { Carousel } from "@/components/site/Carousel";
 import { HealthBanner } from "@/components/services/HealthBanner";
-// import { HealthImpact } from "@/components/services/HealthImpact";
 import { HealthOverview } from "@/components/services/HealthOverview";
 import { HealthFeatures } from "@/components/services/HealthFeatures";
 import { HealthProcess } from "@/components/services/HealthProcess";
@@ -34,8 +33,8 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 
-import healthBanner from "@/assets/health-banner.jpg";
-import healthOverview from "@/assets/health-overview.jpg";
+import healthBanner from "@/assets/our-works/orphange/005.jpeg";
+import healthOverview from "@/assets/health-and-support-image.png";
 import healthFieldStory from "@/assets/health-field-story.jpg";
 
 export const Route = createFileRoute("/services/health-medical-support")({
@@ -59,29 +58,6 @@ export const Route = createFileRoute("/services/health-medical-support")({
 });
 
 function HealthMedicalSupportPage() {
-
-  // const HEALTH_IMPACT = [
-  //   {
-  //     value: "35+",
-  //     label: "medical camps",
-  //     icon: Stethoscope,
-  //   },
-  //   {
-  //     value: "40",
-  //     label: "patients per Rs 25,000",
-  //     icon: Users,
-  //   },
-  //   {
-  //     value: "100%",
-  //     label: "medicine free at camp",
-  //     icon: Pill,
-  //   },
-  //   {
-  //     value: "On-site",
-  //     label: "screening & referrals",
-  //     icon: ClipboardCheck,
-  //   },
-  // ];
 
   const HEALTH_OVERVIEW = {
     eyebrow: "Overview",

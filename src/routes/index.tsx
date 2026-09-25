@@ -9,12 +9,8 @@ import { DonateSection } from "@/components/site/DonateSection";
 import { FAQS_GENERAL, SERVICES, SITE } from "@/lib/site";
 import heroFood from "@/assets//ration-distribution.jpg";
 import heroIftar from "@/assets/our-works/ramdan-drive/005.jpeg";
-import heroWater from "@/assets/hero-water.jpg";
-import healthBanner from "@/assets/health-banner.jpg";
 import communityBanner from "@/assets/community-banner.jpeg";
 import workYouth from "@/assets/work-youth.jpg";
-import workMedical from "@/assets/work-medical.jpg";
-import workClothing from "@/assets/our-works/orphange/007.jpeg";
 import rationDistributionImage from "@/assets/ration-distribution-image.jpg"
 import workEidMeal from "@/assets/our-works/orphange/002.jpeg";
 import workChildren from "@/assets/our-works/events/006.jpeg";

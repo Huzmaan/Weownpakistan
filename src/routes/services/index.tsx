@@ -3,9 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteLayout, SectionHeading, PageBanner } from "@/components/site/SiteLayout";
 import { DonateSection } from "@/components/site/DonateSection";
 import { SERVICES, SITE } from "@/lib/site";
-import heroFood from "@/assets/our-works/orphange/006.jpeg";
+import serviceOne from "@/assets/service-one-image.png";
+import serviceBanner from "@/assets/service-banner.jpeg"
 import heroIftar from "@/assets/our-works/ramdan-drive/008.jpeg";
-import heroWater from "@/assets/hero-water.jpg";
+import workYouthProgram from "@/assets/work-youth-program.png";
+import logo from "@/assets/logo.png";
 import workYouth from "@/assets/work-youth.jpg";
 import workMedical from "@/assets/work-medical.jpg";
 import workChildren from "@/assets/our-works/orphange/005.jpeg";
@@ -30,12 +32,13 @@ export const Route = createFileRoute("/services/")({
 });
 
 const IMAGES: Record<string, string> = {
-  Cloth: heroFood,
+  Cloth: serviceOne,
   iftar: heroIftar,
   welfare: workChildren,
-  water: heroWater,
-  youth: workYouth,
-  medical: workMedical,
+  water: workYouth,
+  youth: logo,
+  workYouth:workYouthProgram,
+  medical: logo,
 };
 
 function Services() {
@@ -45,7 +48,7 @@ function Services() {
         eyebrow="Services"
         title="Programs designed around what families actually ask for."
         intro="Food, water, healthcare, skills and emergency relief each with its own field team, calendar and reporting."
-        image={heroFood}
+        image={serviceBanner}
       />
 
       <section className="container-wopf py-24 lg:py-32">

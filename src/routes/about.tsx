@@ -6,7 +6,7 @@ import { DonateSection } from "@/components/site/DonateSection";
 import { StatsBand } from "@/components/site/StatsBand";
 import { FAQS_ORG, TEAM } from "@/lib/site";
 import aboutbaner from "@/assets/about-banner.jpg";
-import workRation from "@/assets/our-works/orphange/005.jpeg";
+import aboutImage from "@/assets/about-image.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -60,7 +60,7 @@ function About() {
             </Link>
           </div>
           <img
-            src={workRation}
+            src={aboutImage}
             alt="Volunteers loading ration bags for a WOPF distribution drive"
             loading="lazy"
             width={1408}

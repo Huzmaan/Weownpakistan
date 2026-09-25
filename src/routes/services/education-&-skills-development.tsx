@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { SiteLayout } from "@/components/site/SiteLayout";
-
+import { SiteLayout, SectionHeading } from "@/components/site/SiteLayout";
+import { Carousel } from "@/components/site/Carousel";
 import { HealthBanner } from "@/components/services/HealthBanner";
 import { HealthImpact } from "@/components/services/HealthImpact";
 import { HealthOverview } from "@/components/services/HealthOverview";
@@ -11,6 +11,16 @@ import { HealthFieldStory } from "@/components/services/HealthFieldStory";
 import { HealthTransparency } from "@/components/services/HealthTransparency";
 import { HealthFaq } from "@/components/services/HealthFaq";
 import { HealthCta } from "@/components/services/HealthCta";
+import ramandanDriveOne from "@/assets/our-works/orphange/005.jpeg";
+import ramandanDriveTwo from "@/assets/our-works/ramdan-drive/002.jpeg";
+import ramandanDriveThree from "@/assets/our-works/orphange/007.jpeg";
+import ramandanDriveFour from "@/assets/our-works/ramdan-drive/004.jpeg";
+import ramandanDriveFive from "@/assets/our-works/events/002.jpeg";
+import ramandanDriveSix from "@/assets/our-works/ramdan-drive/006.jpeg";
+import ramandanDriveSeven from "@/assets/our-works/orphange/013.jpeg";
+import ramandanDriveEight from "@/assets/our-works/orphange/012.jpeg";
+import ramandanDriveNine from "@/assets/our-works/ramdan-drive/009.jpeg";
+import ramandanDriveTen from "@/assets/our-works/ramdan-drive/010.jpeg";
 
 import {
   Stethoscope,
@@ -25,8 +35,8 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 
-import healthBanner from "@/assets/health-banner.jpg";
-import healthOverview from "@/assets/health-overview.jpg";
+import healthBanner from "@/assets/our-works/orphange/005.jpeg"
+import healthOverview from "@/assets/health-and-support-image.png";
 import healthFieldStory from "@/assets/health-field-story.jpg";
 
 export const Route = createFileRoute("/services/education-&-skills-development")({
@@ -93,6 +103,8 @@ const HEALTH_OVERVIEW = {
     },
   ],
 };
+
+const GALLERY = [ramandanDriveOne, ramandanDriveTwo, ramandanDriveThree, ramandanDriveFour, ramandanDriveFive, ramandanDriveSix, ramandanDriveSeven, ramandanDriveEight, ramandanDriveNine, ramandanDriveTen];
 
 const HEALTH_FEATURES = [
   {
@@ -229,6 +241,39 @@ const HEALTH_FAQS = [
         text={HEALTH_OVERVIEW.text}
         stats={HEALTH_OVERVIEW.stats}
       />
+
+      {/* Gallery slider */}
+      <section className="container-wopf py-20">
+        <SectionHeading eyebrow="From the field" title="Snapshots from recent Activites" align="center" />
+        <div className="reveal mt-14">
+          <Carousel
+            dots
+            arrows={false}
+            infinite
+            autoplay
+            autoplaySpeed={3500}
+            slidesToShow={3}
+            className="works-slider"
+            responsive={[
+              { breakpoint: 1024, settings: { slidesToShow: 2 } },
+              { breakpoint: 700, settings: { slidesToShow: 1 } },
+            ]}
+          >
+            {GALLERY.map((img, i) => (
+              <div key={i} className="px-3">
+                <img
+                  src={img}
+                  alt={`WOPF field work photograph ${i + 1}`}
+                  loading="lazy"
+                  width={1408}
+                  height={1008}
+                  className="h-72 w-full rounded-3xl object-cover shadow-soft"
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </section>
 
       <HealthFeatures
         eyebrow="What we provide"

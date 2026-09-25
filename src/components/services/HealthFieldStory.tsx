@@ -22,7 +22,7 @@ export function HealthFieldStory({
   return (
     <section className="container-wopf py-24 lg:py-32">
       <div className="grid overflow-hidden rounded-3xl bg-primary-soft lg:grid-cols-[1.08fr_0.92fr]">
-        <figure className="relative min-h-[360px] lg:min-h-[560px]">
+        {/* <figure className="relative min-h-[360px] lg:min-h-[560px]">
           <img
             src={image}
             alt={imageAlt}
@@ -35,7 +35,7 @@ export function HealthFieldStory({
           <figcaption className="absolute bottom-5 left-5 rounded-full bg-card/95 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-primary-deep shadow-soft">
             {caption}
           </figcaption>
-        </figure>
+        </figure> */}
 
         <div className="reveal flex flex-col justify-center p-7 sm:p-10 lg:p-14">
           <Quote
