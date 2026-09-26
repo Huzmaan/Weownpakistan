@@ -40,7 +40,12 @@ export function SiteFooter() {
           <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-gold">Our Programs</h2>
           <ul className="mt-5 space-y-3 text-sm text-ink-foreground/70">
             {SERVICES.map((s) => (
-              <li key={s.slug}>{s.title}</li>
+              // <li key={s.slug}>{s.title}</li>
+              <li key={s.slug}>
+                <Link to={s.button} className="text-ink-foreground/70 transition-colors hover:text-ink-foreground">
+                  {s.title}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -104,14 +109,14 @@ export function SiteFooter() {
         </div>
       </div>
       <a
-  href={`https://wa.me/${SITE.phone.replace(/\s/g, "").replace(/^0/, "92")}`}
-  target="_blank"
-  rel="noreferrer"
-  aria-label="Chat with us on WhatsApp"
-  className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110"
->
-  <FaWhatsapp className="h-7 w-7" aria-hidden="true" />
-</a>
+        href={`https://wa.me/${SITE.phone.replace(/\s/g, "").replace(/^0/, "92")}`}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110"
+      >
+        <FaWhatsapp className="h-7 w-7" aria-hidden="true" />
+      </a>
     </footer>
   );
 }

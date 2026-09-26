@@ -182,9 +182,9 @@ export const TEAM = [
   { name: "Nadir Abbas", role: "Founder & Chairman", initials: "NA", image: nadirAbbas },
   { name: "Maheen Akhtar", role: "President", initials: "MA", image: maheenAkhtar },
   { name: "Ayax Hussain Solangi", role: "Vice President", initials: "AHS", image: ayaxHussain },
+  { name: "Muhammad Imran", role: "Senior Vice President", initials: "MI", image: muhammadImran },
   { name: "Tehreem Ali", role: "General Secretary", initials: "TA", image: tehreemAli },
   { name: "Muhammad Sufyan", role: "General Secretary", initials: "MS", image: muhammadSufyan },
-  { name: "Muhammad Imran", role: "Youth Programs Lead", initials: "MI", image: muhammadImran },
   { name: "Huzmaan Pasta", role: "Operational Manager", initials: "HP", image: huzmaanPasta },
 ];
 
