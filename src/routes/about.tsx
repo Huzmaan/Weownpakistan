@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Target, Eye, ArrowRight } from "lucide-react";
 import { SiteLayout, SectionHeading, PageBanner } from "@/components/site/SiteLayout";
 import { FaqSection } from "@/components/site/FaqSection";
@@ -28,6 +29,18 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
+
+  const [activeTab, setActiveTab] = useState("board");
+
+  const tabs = [
+    { id: "board", label: "Board of Directors" },
+    { id: "executive", label: "Executive Directors" },
+    { id: "team", label: "Team Members" },
+  ];
+
+  const filteredTeam = TEAM.filter(
+    (member) => member.category === activeTab
+  );
   return (
     <SiteLayout>
       <PageBanner
@@ -91,15 +104,35 @@ function About() {
       </section>
 
       {/* ---------- Team ---------- */}
+      {/* ---------- Team ---------- */}
       <section className="container-wopf py-24 lg:py-32">
         <SectionHeading
           eyebrow="Our team"
           title="The Hands and Hearts Behind Our Mission"
-          intro="A volunteer network of dedicated professionals committed to making a lasting difference across Pakistan."
+          intro="A dedicated team of directors, professionals, and volunteers committed to making a lasting difference across Pakistan."
           align="center"
         />
-        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((member) => (
+
+        {/* Tabs */}
+        <div className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setActiveTab(tab.id)}
+              className={`rounded-full px-6 py-3 text-sm font-bold transition-all ${activeTab === tab.id
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "border border-border bg-card text-foreground hover:bg-primary-soft"
+                }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Team Grid */}
+        <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredTeam.map((member) => (
             <article
               key={member.name}
               className="reveal group rounded-3xl border border-border bg-card p-6 text-center transition-all hover:-translate-y-1.5 hover:shadow-lift sm:p-8"
@@ -108,12 +141,19 @@ function About() {
                 src={member.image}
                 alt={`${member.name}, ${member.role} at We Own Pakistan Humanitarian and Welfare Foundation`}
                 loading="lazy"
-                // width={640}
-                // height={640}
-                className="mx-auto h-[400] w-full rounded-md object-cover shadow-soft ring-4 ring-primary-soft"
+                className="mx-auto h-[400px] w-full rounded-md object-cover shadow-soft ring-4 ring-primary-soft"
               />
-              <h3 className="mt-6 font-display text-lg font-bold text-foreground">{member.name}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{member.role}</p>
+
+              <h3 className="mt-6 font-display text-lg font-bold text-foreground">
+                {member.name}
+              </h3>
+
+              <p className="mt-1 text-sm text-muted-foreground">
+                {member.role}
+              </p>
+              {/* <p className="mt-1 text-sm text-muted-foreground">
+                {member.description}
+              </p> */}
             </article>
           ))}
         </div>

@@ -14,14 +14,17 @@ export function SiteHeader() {
       data-site-header
       className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl transition-shadow duration-300 [&.is-stuck]:shadow-soft"
     >
-      <div className="container-wopf flex h-20 items-center justify-between gap-4">
+      <div className="container-wopf flex h-24 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logo} alt={`${SITE.name} emblem`} width={56} height={56} className="h-12 w-12 object-contain" />
           <span className="leading-tight">
-            <span className="block font-display text-base font-bold tracking-tight text-primary-deep">WOPF</span>
+            <span className="block font-display text-base font-bold tracking-tight text-primary-deep">We Own Pakistan</span>
             <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:block">
-              We Own Pakistan Humanitarian and Welfare Foundation
+              Humanitarian and Welfare Foundation
             </span>
+            <p className="font-sans text-md leading-7 font-bold text-black" lang="ur">
+            {SITE.tagline}
+          </p>
           </span>
         </Link>
 

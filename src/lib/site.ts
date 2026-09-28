@@ -5,6 +5,7 @@ import muhammadImran from "@/assets/team-members/muhammadimran.jpeg";
 import tehreemAli from "@/assets/team-members/tehreemali.jpeg";
 import muhammadSufyan from "@/assets/team-members/muhammadsufyan.jpeg";
 import huzmaanPasta from "@/assets/team-members/huzmaanpasta.jpg";
+import { Description } from "@radix-ui/react-dialog";
 
 /**
  * Central content/config for the WOPF site.
@@ -43,7 +44,7 @@ export const SERVICE_PAGES = [
 ] as const;
 
 export const STATS = [
-  { value: "4 Years", label: "Ramandan Drive" },
+  { value: "10 Years", label: "Ramandan Drive" },
   { value: "50+", label: "Activites Completed" },
   { value: "100+", label: "Ration Distribution" },
   { value: "500+", label: "Active volunteers" },
@@ -56,13 +57,6 @@ export const SERVICES = [
     button: "/services/health-medical-support",
     summary: "Providing basic healthcare, free consultations, and life-saving medicines to underserved families and rural communities across Sindh.",
     points: ["Free medical camps & eye screening", "Essential medicines & diagnostic support", "Maternal care & basic health awareness"],
-  },
-  {
-    slug: "iftar",
-    title: "Humanitarian Support & Poverty Alleviation",
-    button: "/services/humanitarian-support-&-poverty-alleviation",
-    summary: "Distributing essential monthly groceries, warm clothing, and seasonal assistance to widows, daily-wage earners, and struggling households.",
-    points: ["Monthly family ration packs", "Seasonal clothing & winter blankets", "Ramadan & Eid relief packages"],
   },
   {
     slug: "welfare",
@@ -78,6 +72,13 @@ export const SERVICES = [
     summary:
       "Empowering young minds with basic schooling, career guidance, and practical technical skills to build sustainable livelihoods.",
     points: ["School fee support & stationery distribution", "Basic vocational & digital skills training", "Youth mentoring & career counseling"],
+  },
+  {
+    slug: "iftar",
+    title: "Humanitarian Support & Poverty Alleviation",
+    button: "/services/humanitarian-support-&-poverty-alleviation",
+    summary: "Distributing essential monthly groceries, warm clothing, and seasonal assistance to widows, daily-wage earners, and struggling households.",
+    points: ["Monthly family ration packs", "Seasonal clothing & winter blankets", "Ramadan & Eid relief packages"],
   },
   {
     slug: "youth",
@@ -179,13 +180,13 @@ export const TESTIMONIALS = [
 ];
 
 export const TEAM = [
-  { name: "Nadir Abbas", role: "Founder & Chairman", initials: "NA", image: nadirAbbas },
-  { name: "Maheen Akhtar", role: "President", initials: "MA", image: maheenAkhtar },
-  { name: "Ayax Hussain Solangi", role: "Vice President", initials: "AHS", image: ayaxHussain },
-  { name: "Muhammad Imran", role: "Senior Vice President", initials: "MI", image: muhammadImran },
-  { name: "Tehreem Ali", role: "General Secretary", initials: "TA", image: tehreemAli },
-  { name: "Muhammad Sufyan", role: "General Secretary", initials: "MS", image: muhammadSufyan },
-  { name: "Huzmaan Pasta", role: "Operational Manager", initials: "HP", image: huzmaanPasta },
+  { name: "Nadir Abbas", role: "Founder & Chairman", initials: "NA", image: nadirAbbas  , category: "board",},
+  // { name: "Maheen Akhtar", role: "President", initials: "MA", image: maheenAkhtar },
+  { name: "Ayax Hussain Solangi", role: "Vice President", initials: "AHS", image: ayaxHussain , category: "board", description: "As Vice President of WOPF, I play an active role in supporting organizational leadership, strategic planning, and community-focused initiatives. I work closely with the executive team and volunteers to strengthen collaboration, expand our outreach, and turn WOPF’s vision into practical action. My contribution focuses on community development, volunteer engagement, partnerships, and creating sustainable social impact for underserved communities." },
+  { name: "Muhammad Imran", role: "Senior Vice President", initials: "MI", image: muhammadImran , category: "board", description: "As Senior Vice President at WOPF, I am dedicated to driving initiatives that create real and lasting impact for communities in need. I work closely with our leadership to guide strategic decisions, foster strong internal collaboration, and build meaningful partnerships. My focus is on empowering our Executive Team and volunteers, strengthening our organizational structure, and developing sustainable projects that promote social well-being and create opportunities for positive change." },
+  { name: "Tehreem Ali", role: "General Secretary", initials: "TA", image: tehreemAli , category: "executive", description: "As the General Secretary for our NGO, I take care of our daily office work, keep the board members connected, and make sure we follow all laws and rules. By organizing our work and building good relationships, I help turn our big plans into real results. I am fully dedicated to creating lasting change and helping the communities we serve."},
+  { name: "Muhammad Sufyan", role: "General Secretary", initials: "MS", image: muhammadSufyan , category: "executive", },
+  { name: "Huzmaan Pasta", role: "Operational Manager", initials: "HP", image: huzmaanPasta , category: "team", },
 ];
 
 export const POSTS = [

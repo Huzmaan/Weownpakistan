@@ -221,6 +221,7 @@ function Contact() {
                   <option>Request financial or medical support</option>
                   <option>Donate or ask about Zakat</option>
                   <option>Report a family in need</option>
+                  <option>Become a Volunteer</option>
                   <option>Sponsor a project or initiative</option>
                   <option>General Inquiry / Other</option>
                 </select>

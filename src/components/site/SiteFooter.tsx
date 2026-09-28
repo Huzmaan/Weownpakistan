@@ -12,13 +12,10 @@ export function SiteFooter() {
         <div>
           <div className="flex items-center gap-3">
             <img src={logo} alt={SITE.name} width={56} height={56} className="h-14 w-14 object-contain" />
-            <span className="font-display text-lg font-bold">WOPF</span>
+            <span className="font-display text-lg font-bold">We Own Pakistan</span>
           </div>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
-            We Own Pakistan Humanitarian and Welfare Foundation is a volunteer-driven welfare organisation serving communities across Sindh with
-            food, water, health and youth programs.
-          </p>
-          <p className="mt-4 font-display text-sm text-gold" lang="ur" dir="rtl">
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-foreground/70">Humanitarian and Welfare Foundation</p>
+          <p className="mt-4 font-sans text-md leading-7 font-bold text-white" lang="ur" dir="rtl">
             {SITE.tagline}
           </p>
         </div>

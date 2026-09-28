@@ -54,18 +54,18 @@ const HERO_SLIDES = [
     title: "Every family deserves a little more room to hope.",
     text: "Practical support delivered by volunteers who know the communities they serve.",
   },
-  // {
-  //   image: heroWater,
-  //   eyebrow: "Water relief",
-  //   title: "Clean water within walking distance.",
-  //   text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
-  // },
-  // {
-  //   image: healthBanner,
-  //   eyebrow: "Healthcare Support",
-  //   title: "Care that travels closer to people.",
-  //   text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
-  // },
+  {
+    image: heroFood,
+    eyebrow: "Water relief",
+    title: "Clean water within walking distance.",
+    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+  },
+  {
+    image: communityBanner,
+    eyebrow: "Healthcare Support",
+    title: "Care that travels closer to people.",
+    text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
+  },
 ];
 
 const WORKS = [
@@ -80,7 +80,7 @@ function Home() {
     <SiteLayout>
       {/* ---------- Hero slider ---------- */}
       <section className="relative isolate h-[calc(100svh-5rem)] min-h-[520px] max-h-[860px] overflow-hidden bg-ink sm:min-h-[600px]">
-        <Carousel dots arrows={false} infinite fade autoplay autoplaySpeed={6500} speed={900} pauseOnHover={false}>
+        <Carousel dots arrows={false} infinite fade autoplay autoplaySpeed={3000} speed={900} pauseOnHover={false}>
           {HERO_SLIDES.map((slide, i) => (
             <div key={slide.title} className="relative h-[calc(100svh-5rem)] min-h-[520px] max-h-[860px] sm:min-h-[600px]">
               <img
@@ -92,15 +92,15 @@ function Home() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="veil absolute inset-0" />
-              <div className="container-wopf relative flex h-full items-center">
-                <div className="max-w-2xl">
-                  <span className="inline-flex rounded-full bg-ink-foreground/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold backdrop-blur">
+              <div className="container-wopf relative flex h-full items-center justify-center">
+                <div className="max-w-full text-center">
+                  {/* <span className="inline-flex rounded-full bg-ink-foreground/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold backdrop-blur">
                     {slide.eyebrow}
-                  </span>
-                  <h1 className="mt-6 text-4xl font-bold leading-[1.05] text-ink-foreground sm:text-5xl lg:text-[3.75rem]">
+                  </span> */}
+                  <h1 className="capitalize text-4xl w-full font-bold leading-[1.05] text-ink-foreground sm:text-5xl lg:text-[3.75rem]">
                     {slide.title}
                   </h1>
-                  <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-foreground/80">{slide.text}</p>
+                  {/* <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-foreground/80">{slide.text}</p>
                   <div className="mt-9 flex flex-wrap gap-3">
                     <a
                       href={`tel:${SITE.phone.replace(/\s/g, "")}`}
@@ -117,7 +117,7 @@ function Home() {
                   </div>
                   <p className="mt-8 font-display text-sm text-gold/90 text-end" lang="ur" dir="rtl">
                     {SITE.tagline}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -187,24 +187,26 @@ function Home() {
           />
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service, i) => (
-              <article
-                key={service.slug}
-                className="reveal group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift"
-                style={{ transitionDelay: `${i * 40}ms` }}
-              >
-                <span className="font-display text-sm font-bold text-gold">0{i + 1}</span>
-                <h3 className="mt-4 font-display text-xl font-bold text-foreground">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.summary}</p>
-                <ul className="mt-6 space-y-2">
-                  {service.points.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-xs font-semibold text-primary-deep">
-                      <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-                <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
-              </article>
+              <Link to={service.button}>
+                <article
+                  key={service.slug}
+                  className="reveal group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift"
+                  style={{ transitionDelay: `${i * 40}ms` }}
+                >
+                  <span className="font-display text-sm font-bold text-gold">0{i + 1}</span>
+                  <h3 className="mt-4 font-display text-xl font-bold text-foreground">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.summary}</p>
+                  <ul className="mt-6 space-y-2">
+                    {service.points.map((p) => (
+                      <li key={p} className="flex items-center gap-2 text-xs font-semibold text-primary-deep">
+                        <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+                </article>
+              </Link>
             ))}
           </div>
         </div>
