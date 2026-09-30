@@ -6,11 +6,26 @@ import tehreemAli from "@/assets/team-members/tehreemali.jpeg";
 import muhammadSufyan from "@/assets/team-members/muhammadsufyan.jpeg";
 import huzmaanPasta from "@/assets/team-members/huzmaanpasta.jpg";
 import { Description } from "@radix-ui/react-dialog";
+export type ServiceSubPage = { label: string; to: string };
+export type ServicePage = { label: string; to: string; children: ServiceSubPage[] };
 
 /**
  * Central content/config for the WOPF site.
  * Keeping copy here keeps page components presentational and easy to hand off.
  */
+
+export type NavChild = { label: string; to: string; children?: NavChild[] };
+
+export const SERVICES_MENU: NavChild[] = [
+  { label: "All Services", to: "/services" },
+  {
+    label: "Health & Medical",
+    to: "/services/health-medical-support",
+    children: [
+      { label: "Medical Support", to: "/services/health-medical/medical-support" },
+    ],
+  },
+];
 
 export const SITE = {
   name: "We Own Pakistan Humanitarian and Welfare Foundation",
@@ -33,14 +48,46 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-export const SERVICE_PAGES = [
-  { label: "Health & Medical Support", to: "/services/health-medical-support" },
-  { label: "Humanitarian Support & Poverty Alleviation", to: "/services/humanitarian-support-&-poverty-alleviation" },
-  { label: "Disaster & Emergency Relief" , to: "/services/disaster-&-emergency-relief"},
-  { label: "Education & Skills Development" , to: "/services/education-&-skills-development"},
-  { label: "Wash program & Climate Change Awareness" , to: "/services/wash-program-&-climate-change-awareness"},
-  { label: "Disability Care, Support & Rehabilitation" , to: "/services/disability-care-support-&-rehabilitation"},
-  { label: "Youth Empowerment & Community Development" , to: "/services/youth-empowerment-&-Community-development"},
+export const SERVICE_PAGES: ServicePage[] = [
+  {
+    label: "Health & Medical Support",
+    to: "/services/health-medical-support",
+    children: [
+      { label: "Medical Support", to: "/services/health-medical-support/medical-support" },
+    ],
+  },
+  {
+    label: "Humanitarian Support & Poverty Alleviation",
+    to: "/services/humanitarian-support-&-poverty-alleviation",
+    children: [
+      // e.g. { label: "Humanitarian Support", to: "/services/humanitarian-support-&-poverty-alleviation/humanitarian-support" },
+    ],
+  },
+  {
+    label: "Disaster & Emergency Relief",
+    to: "/services/disaster-&-emergency-relief",
+    children: [],
+  },
+  {
+    label: "Education & Skills Development",
+    to: "/services/education-&-skills-development",
+    children: [],
+  },
+  {
+    label: "WASH Program & Climate Change Awareness",
+    to: "/services/wash-program-&-climate-change-awareness",
+    children: [],
+  },
+  {
+    label: "Disability Care, Support & Rehabilitation",
+    to: "/services/disability-care-support-&-rehabilitation",
+    children: [],
+  },
+  {
+    label: "Youth Empowerment & Community Development",
+    to: "/services/youth-empowerment-&-Community-development",
+    children: [],
+  },
 ] as const;
 
 export const STATS = [

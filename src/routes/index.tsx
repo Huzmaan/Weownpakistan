@@ -128,7 +128,7 @@ function Home() {
       <StatsBand />
 
       {/* ---------- About ---------- */}
-      <section className="container-wopf py-24 lg:py-32">
+      {/* <section className="container-wopf py-24 lg:py-32">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
           <div className="reveal relative">
             <img
@@ -174,7 +174,7 @@ function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ---------- Services ---------- */}
       <section className="bg-secondary/60 py-24 lg:py-32">
