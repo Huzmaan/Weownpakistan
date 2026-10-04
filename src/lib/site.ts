@@ -6,6 +6,7 @@ import tehreemAli from "@/assets/team-members/tehreemali.jpeg";
 import muhammadSufyan from "@/assets/team-members/muhammadsufyan.jpeg";
 import huzmaanPasta from "@/assets/team-members/huzmaanpasta.jpg";
 import { Description } from "@radix-ui/react-dialog";
+import { SERVICE_GROUPS } from "@/lib/programs";
 export type ServiceSubPage = { label: string; to: string };
 export type ServicePage = { label: string; to: string; children: ServiceSubPage[] };
 
@@ -48,48 +49,66 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-export const SERVICE_PAGES: ServicePage[] = [
-  {
-    label: "Health & Medical Support",
-    to: "/services/health-medical-support",
-    children: [
-      { label: "Medical Support", to: "/services/health-medical-support/medical-support" },
-    ],
-  },
-  {
-    label: "Humanitarian Support & Poverty Alleviation",
-    to: "/services/humanitarian-support-&-poverty-alleviation",
-    children: [
-      // e.g. { label: "Humanitarian Support", to: "/services/humanitarian-support-&-poverty-alleviation/humanitarian-support" },
-    ],
-  },
-  {
-    label: "Disaster & Emergency Relief",
-    to: "/services/disaster-&-emergency-relief",
-    children: [],
-  },
-  {
-    label: "Education & Skills Development",
-    to: "/services/education-&-skills-development",
-    children: [],
-  },
-  {
-    label: "WASH Program & Climate Change Awareness",
-    to: "/services/wash-program-&-climate-change-awareness",
-    children: [],
-  },
-  {
-    label: "Disability Care, Support & Rehabilitation",
-    to: "/services/disability-care-support-&-rehabilitation",
-    children: [],
-  },
-  {
-    label: "Youth Empowerment & Community Development",
-    to: "/services/youth-empowerment-&-Community-development",
-    children: [],
-  },
+export const FOOTERNAV = [
+  { label: "Medicine Bank", to: "/services/health-medical-support/medicine-bank" },
+  { label: "Free Medical Camp", to: "/services/health-medical-support/medical-support" },
+  { label: "Monthly Ration Program", to: "/services/humanitarian-support-&-poverty-alleviation/monthly-ration" },
+  { label: "Ramadan Ration & Iftar", to: "/services/humanitarian-support-&-poverty-alleviation/ramadan-ration-iftar" },
 ] as const;
 
+
+// export const SERVICE_PAGES: ServicePage[] = [
+  
+//   {
+//     label: "Health & Medical Support",
+//     to: "/services/health-medical-support",
+//     children: [
+//       { label: "Medical Support", to: "/services/health-medical-support/medical-support" },
+//     ],
+//   },
+//   {
+//     label: "Humanitarian Support & Poverty Alleviation",
+//     to: "/services/humanitarian-support-&-poverty-alleviation",
+//     children: [
+//       // e.g. { label: "Humanitarian Support", to: "/services/humanitarian-support-&-poverty-alleviation/humanitarian-support" },
+//     ],
+//   },
+//   {
+//     label: "Disaster & Emergency Relief",
+//     to: "/services/disaster-&-emergency-relief",
+//     children: [],
+//   },
+//   {
+//     label: "Education & Skills Development",
+//     to: "/services/education-&-skills-development",
+//     children: [],
+//   },
+//   {
+//     label: "WASH Program & Climate Change Awareness",
+//     to: "/services/wash-program-&-climate-change-awareness",
+//     children: [],
+//   },
+//   {
+//     label: "Disability Care, Support & Rehabilitation",
+//     to: "/services/disability-care-support-&-rehabilitation",
+//     children: [],
+//   },
+//   {
+//     label: "Youth Empowerment & Community Development",
+//     to: "/services/youth-empowerment-&-Community-development",
+//     children: [],
+//   },
+// ] as const;
+
+
+export const SERVICE_PAGES = SERVICE_GROUPS.map((g) => ({
+  label: g.label,
+  to: `/services/${g.slug}`,
+  children: g.programs.map((p) => ({
+    label: p.title,
+    to: `/services/${g.slug}/${p.slug}`,
+  })),
+}));
 export const STATS = [
   { value: "10 Years", label: "Ramandan Drive" },
   { value: "50+", label: "Activites Completed" },
@@ -102,96 +121,96 @@ export const SERVICES = [
     slug: "Cloth",
     title: "Health & Medical Support",
     button: "/services/health-medical-support",
-    summary: "Providing basic healthcare, free consultations, and life-saving medicines to underserved families and rural communities across Sindh.",
-    points: ["Free medical camps & eye screening", "Essential medicines & diagnostic support", "Maternal care & basic health awareness"],
+    summary: "Bringing basic healthcare closer to communities through medical camps, screenings, medicines, health awareness and referrals for people who require further care.",
+    points: ["Medical camps and general screenings", "Medicine and diagnostic support", "Maternal, child and community health awareness"],
   },
   {
     slug: "welfare",
     title: "Disaster & Emergency Relief",
     button: "/services/disaster-&-emergency-relief",
-    summary: "Delivering immediate emergency aid, food, and temporary shelter to families affected by floods, harsh weather, and sudden crises.",
-    points: ["Emergency food & clean water kits", "Flood response & temporary shelter aid", "Post-disaster rehabilitation support"],
+    summary: "Mobilizing volunteers and essential supplies when floods, severe weather or other emergencies disrupt families and communities.",
+    points: ["Emergency food and drinking water", "Shelter and essential household support", "Early recovery and rehabilitation assistance"],
   },
   {
     slug: "water",
     title: "Education & Skills Development",
     button: "/services/education-&-skills-development",
     summary:
-      "Empowering young minds with basic schooling, career guidance, and practical technical skills to build sustainable livelihoods.",
-    points: ["School fee support & stationery distribution", "Basic vocational & digital skills training", "Youth mentoring & career counseling"],
+      "Helping children and young people overcome barriers to learning through educational support, guidance and practical skills development.",
+    points: ["School and learning support", "Digital and vocational skills", "Mentoring and career guidance"],
   },
   {
     slug: "iftar",
     title: "Humanitarian Support & Poverty Alleviation",
     button: "/services/humanitarian-support-&-poverty-alleviation",
-    summary: "Distributing essential monthly groceries, warm clothing, and seasonal assistance to widows, daily-wage earners, and struggling households.",
-    points: ["Monthly family ration packs", "Seasonal clothing & winter blankets", "Ramadan & Eid relief packages"],
+    summary: "Supporting households facing financial hardship with food, seasonal essentials and need-based assistance delivered with dignity.",
+    points: ["Family ration support", "Seasonal clothing and winter assistance", "Ramadan and Eid support"],
   },
   {
     slug: "youth",
     title: "Wash program & Climate Change Awareness",
     button: "/services/wash-program-&-climate-change-awareness",
     summary:
-      "Installing clean drinking water facilities in drought-prone regions and spreading practical awareness about water hygiene and environmental protection.",
-    points: ["Hand pump & filtration unit installation", "Water tanker supply in remote areas", "Tree plantation & climate awareness drives"],
+      "Improving access to safe water and promoting better hygiene, environmental responsibility and community awareness.",
+    points: ["Hand pumps and water solutions", "Hygiene and safe-water awareness", "Tree plantation and climate awareness"],
   },
   {
     slug: "medical",
     title: "Disability Care, Support & Rehabilitation",
     button: "/services/disability-care-support-&-rehabilitation",
     summary:
-      "Assisting individuals with special needs by offering mobility equipment, therapy referrals, and social inclusion opportunities.",
-    points: ["Wheelchairs & mobility aid distribution", "Rehabilitation guidance & support", "Family assistance for special needs care"],
+      "Supporting people with disabilities and their families through mobility assistance, referrals and practical inclusion-focused support.",
+    points: ["Wheelchairs and mobility aids", "Rehabilitation guidance and referrals", "Family and community support"],
   },
   {
   slug: "workYouth",
   title: "Youth Empowerment & Community Development",
   button: "/services/youth-empowerment-&-Community-development",
   summary:
-    "Engaging youth through leadership programs, skill workshops, and active community development projects for a better future.",
-  points: ["Youth leadership & mentoring", "Skill-building workshops", "Community engagement drives"],
+    "Giving young people opportunities to volunteer, learn, lead and contribute to the communities around them.",
+  points: ["Leadership and mentoring", "Skills workshops", "Community service and engagement"],
   },
 ];
 
 export const FAQS_GENERAL = [
   {
-    q: "Where does We Own Pakistan Humanitarian and Welfare Foundation work?",
-    a: "Our field teams operate across Sindh Karachi, Hyderabad, Dadu, Thatta and the drought-affected belts of Tharparkar with volunteer chapters growing in other provinces.",
+    q: "Where does We Own Pakistan Foundation work?",
+    a: "WOPF currently focuses much of its field work in Sindh, with activities undertaken according to community need, available resources and volunteer capacity. Locations displayed publicly should reflect current, documented operations.",
   },
   {
     q: "How is my donation used?",
-    a: "Donations are allocated directly to active field projects: ration packs, water access, medical camps and youth programs. Administrative overheads are kept deliberately low and are met through separate patron contributions.",
+    a: "Donations are directed to the program or purpose selected by the donor, where designated. General contributions support approved welfare activities according to current needs. WOPF should maintain donation and expenditure records so that funds can be accounted for responsibly.",
   },
   {
     q: "Can I donate Zakat to WOPF?",
-    a: "Yes. Zakat funds are kept in a separate pool and disbursed only to Zakat-eligible recipients such as widows, orphans and families without income.",
+    a: "Yes, WOPF may accept Zakat for eligible beneficiaries and qualifying activities. Zakat contributions should be separately identified and used only for eligible purposes under the Foundation’s approved procedures. Donors may contact the team to confirm current Zakat-eligible programs.",
   },
   {
     q: "Do you provide proof of distribution?",
-    a: "Every drive is documented with photographs, beneficiary counts and location details, published on our Facebook page and shared with donors on request.",
+    a: "WOPF aims to document field activities through appropriate records such as distribution counts, locations, photographs and beneficiary records. The type of evidence available may vary by program and should always respect beneficiary dignity and privacy.",
   },
   {
     q: "How can I volunteer?",
-    a: "Fill in the contact form or message us on Facebook. Volunteers help with packing, on-ground distribution, data collection and awareness sessions.",
+    a: "Complete the volunteer enquiry form or contact the WOPF team. Volunteers can support field distributions, medical camps, education and youth activities, logistics, communications and other areas depending on current requirements.",
   },
 ];
 
 export const FAQS_ORG = [
   {
-    q: "Is WOPF a registered non-profit organisation?",
-    a: "Yes, We Own Pakistan Humanitarian and Welfare Foundation (WOPF) is a fully registered non-profit organisation operating in compliance with local regulations and welfare standards.",
+    q: "Is WOPF a registered non-profit organization?",
+    a: "WOPF states that it is a registered non-profit welfare organization. The final website should display the official legal name, registration authority, registration number and any other status the organization is authorized to publish so that donors and partners can verify the claim independently.",
   },
   {
     q: "How are beneficiary families selected for support?",
-    a: "Our field team conducts thorough ground checks and verification processes to identify and prioritise deserving families based on merit, need, and urgency.",
+    a: "Beneficiaries should be identified through referrals, field engagement and a documented assessment of need. The process should consider household circumstances and the purpose of the relevant program so that limited resources can be directed responsibly.",
   },
   {
     q: "How can I track where my donation is being used?",
-    a: "We maintain complete financial transparency. Regular project updates, impact reports, and media proof are shared on our platform and sent directly to our donors.",
+    a: "For designated contributions, WOPF should record the program or purpose selected by the donor and maintain supporting activity and expenditure records. Donors seeking information about a contribution may contact the team with the relevant payment or reference details.",
   },
   {
     q: "What types of projects does WOPF focus on?",
-    a: "We focus on sustainable community development, disaster relief, education, clean water initiatives, and healthcare support for underprivileged communities across Pakistan.",
+    a: "WOPF’s current program areas include health and medical support, humanitarian assistance and poverty alleviation, disaster and emergency relief, education and skills development, WASH and climate awareness, disability support and rehabilitation, and youth empowerment and community development.",
   },
 ];
 

@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { FaTiktok, FaWhatsapp } from "react-icons/fa";
-import { NAV, SERVICES, SITE } from "@/lib/site";
+import { FOOTERNAV, SERVICES, SITE } from "@/lib/site";
 
 /** Global footer: brand, sitemap, services, contact and social links. */
 export function SiteFooter() {
@@ -23,7 +23,7 @@ export function SiteFooter() {
         <nav aria-label="Footer navigation">
           <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-gold">Explore</h2>
           <ul className="mt-5 space-y-3 text-sm">
-            {NAV.map((item) => (
+            {FOOTERNAV.map((item) => (
               <li key={item.to}>
                 <Link to={item.to} className="text-ink-foreground/70 transition-colors hover:text-ink-foreground">
                   {item.label}

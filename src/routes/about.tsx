@@ -45,8 +45,8 @@ function About() {
     <SiteLayout>
       <PageBanner
         eyebrow="About us"
-        title="Ordinary people, organised well, refusing to look away."
-        intro="We Own Pakistan Humanitarian and Welfare Foundation began with one ration drive in 2016 and grew into a year-round welfare network across Sindh."
+        title="Ordinary People, Organized Around a Shared Responsibility."
+        intro="WOPF began with a small group of people who chose to respond instead of looking away. Since 2016, that same spirit of volunteerism has shaped our work with communities across Sindh and beyond."
         image={aboutbaner}
       />
 
@@ -58,12 +58,12 @@ function About() {
           <div>
             <SectionHeading
               eyebrow="Our story"
-              title="A Foundation Built By People Who Chose To Help"
-              intro="We Own Pakistan Humanitarian and Welfare Foundation was established in 2016 in Karachi by Founder and Chairman Nadir Abbas along with a group of dedicated volunteers who believed that communities can create solutions when people come together."
+              title="A Foundation Built by People Who Chose to Help."
+              intro="We Own Pakistan Humanitarian & Welfare Foundation was established in Karachi in 2016 by Founder and Chairman Nadir Abbas together with a group of volunteers who believed that community problems should not always be left for someone else to solve."
             />
             <div className="reveal mt-6 space-y-5 leading-relaxed text-muted-foreground">
-              <p>What started as a small ration distribution activity has grown into a wider welfare initiative supporting communities through food assistance, healthcare activities, water projects, youth programs, and emergency support.</p>
-              <p>We do not believe in helping from a distance. Our volunteers work directly with communities, understand their challenges, and provide support according to their needs.</p>
+              <p>Their first initiative focused on ration support for families facing financial hardship. It was a modest beginning, but direct contact with communities made one thing clear: the need extended far beyond food. Families were also struggling with healthcare, safe water, education and the consequences of emergencies.</p>
+              <p>As volunteers and supporters joined, WOPF’s work expanded in response to those needs. The organization began arranging medical camps, water initiatives, education support, emergency relief and opportunities for young people to participate in community service.</p>
             </div>
             <Link
               to="/services"
@@ -108,8 +108,8 @@ function About() {
       <section className="container-wopf py-24 lg:py-32">
         <SectionHeading
           eyebrow="Our team"
-          title="The Hands and Hearts Behind Our Mission"
-          intro="A dedicated team of directors, professionals, and volunteers committed to making a lasting difference across Pakistan."
+          title="The People Behind the Work."
+          intro="WOPF is led and supported by people who contribute their time, professional experience and community knowledge to the organization’s welfare activities. Leadership profiles should be concise, factual and focused on each person’s role and contribution."
           align="center"
         />
 

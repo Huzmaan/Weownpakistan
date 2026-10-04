@@ -10,6 +10,7 @@ import { FAQS_GENERAL, SERVICES, SITE } from "@/lib/site";
 import heroFood from "@/assets//ration-distribution.jpg";
 import heroIftar from "@/assets/our-works/ramdan-drive/005.jpeg";
 import communityBanner from "@/assets/community-banner.jpeg";
+import HealthBanner from "@/assets/service-banner.jpeg";
 import workYouth from "@/assets/work-youth.jpg";
 import rationDistributionImage from "@/assets/ration-distribution-image.jpg"
 import workEidMeal from "@/assets/our-works/orphange/002.jpeg";
@@ -39,38 +40,38 @@ const HERO_SLIDES = [
   {
     image: heroIftar,
     eyebrow: "Ramadan drive",
-    title: "A place at the dastarkhwan for everyone.",
+    title: "Together, We Can Make a Difference Where It Matters Most.",
     text: "Thirty nights of community Iftar, Sehri boxes and Eid gifts across Karachi and Hyderabad.",
   },
   {
     image: heroFood,
     eyebrow: "Ration Distribution Activity",
-    title: "Bringing Hope to Families Across Sindh",
+    title: "A Little Support Can Carry a Family Through a Difficult Time.",
     text: "Supporting underserved families with food, essential supplies, and community-driven initiatives across interior Sindh.",
   },
   {
     image: communityBanner,
     eyebrow: "Community welfare",
-    title: "Every family deserves a little more room to hope.",
+    title: "Your Time and Skills Can Make Someone's Day Better.",
     text: "Practical support delivered by volunteers who know the communities they serve.",
   },
+  // {
+  //   image: heroFood,
+  //   eyebrow: "Water relief",
+  //   title: "Clean water within walking distance.",
+  //   text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
+  // },
   {
-    image: heroFood,
-    eyebrow: "Water relief",
-    title: "Clean water within walking distance.",
-    text: "Hand pumps and tanker rotations for drought-hit settlements in Tharparkar.",
-  },
-  {
-    image: communityBanner,
+    image: HealthBanner,
     eyebrow: "Healthcare Support",
-    title: "Care that travels closer to people.",
+    title: "Bringing Essential Healthcare Closer to Communities.",
     text: "Basic healthcare, medical guidance, screening, and medicines for underserved communities.",
   },
 ];
 
 const WORKS = [
   { image: rationDistributionImage, title: "Monthly Rashan Distribution", place: "Muzaffarabad, Punjab", meta: "420 families served" },
-  { image: workEidMeal, title: "Eid gift & meal packs", place: "Karachi", meta: "1,100 children" },
+  { image: workEidMeal, title: "Eid gift & meal packs", place: "Karachi", meta: "700+ childrens" },
   // { image: workMedical, title: "Free medical camp", place: "Thatta, Sindh", meta: "312 patients treated" },
   { image: workYouth, title: "Youth motivational seminar", place: "Karachi", meta: "600+ students" },
 ];
@@ -128,7 +129,7 @@ function Home() {
       <StatsBand />
 
       {/* ---------- About ---------- */}
-      {/* <section className="container-wopf py-24 lg:py-32">
+      <section className="container-wopf py-24 lg:py-32">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
           <div className="reveal relative">
             <img
@@ -150,15 +151,15 @@ function Home() {
           <div>
             <SectionHeading
               eyebrow="About WOPF"
-              title="A foundation built by neighbours, not by outsiders."
-              intro="The We Own Pakistan Humanitarian and Welfare Foundation was founded in 2016, co-initiated by Nadir Abbas and a group of close-knit friends in Karachi. The original idea that brought this group together to launch this initiative was simply that they grew tired of waiting painfully long for external aid. Unwilling to sit around waiting for others to come to their rescue, they gritted their teeth and took matters into their own hands to deliver tangible help to people in need around them. Their very first step was nothing more than a time-pressed emergency operation: carrying supply rations, they knocked on doors from household to household, delivering food rations to those who needed them. No one could have predicted that starting from this small act, the tiny initiative launched by just a few people back then would grow into today’s welfare network covering communities across Sindh, operating nonstop all year round."
+              title="A Foundation Built by People Who Chose to Help."
+              intro="We Own Pakistan Humanitarian & Welfare Foundation began in Karachi in 2016 when Nadir Abbas and a group of volunteers decided to respond directly to the needs they were seeing around them. The first effort was simple: arrange ration and deliver it to families who needed support."
             />
             <ul className="reveal mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                "100% volunteer-driven, with minimal administrative overhead",
-                "Fully documented and traceable beneficiary records",
-                "Strictly segregated accounts for transparent and verified Zakat tracking",
-                "Active presence across 100+ distribution centers, with direct, on-ground operations",
+                "Volunteer-led community work",
+                "Beneficiary and activity documentation",
+                "Separate identification and record-keeping for Zakat funds",
+                "Direct field participation by volunteers and coordinators",
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm font-medium text-foreground/85">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
@@ -174,15 +175,15 @@ function Home() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* ---------- Services ---------- */}
       <section className="bg-secondary/60 py-24 lg:py-32">
         <div className="container-wopf">
           <SectionHeading
             eyebrow="What we do"
-            title="Focused initiatives built for long term community impact."
-            intro="Active programs managed by local coordinators to deliver immediate relief and continuous development."
+            title="Practical Support for Real Community Needs."
+            intro="Different families face different challenges. Our programs are designed around needs we encounter in the communities we serve, from immediate food and medical assistance to education, clean water and longer-term community participation."
             align="center"
           />
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -217,12 +218,9 @@ function Home() {
         <div className="surface-brand reveal relative overflow-hidden rounded-[2rem] px-6 py-12 text-center sm:rounded-[2.5rem] sm:py-16 shadow-lift sm:px-16">
           <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/25 blur-3xl" aria-hidden="true" />
           <h2 className="relative mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            One family. One month of food. One decision from you.
+            One Family. One Month of Support. One Decision to Help.
           </h2>
-          <p className="relative mx-auto mt-6 max-w-2xl text-base leading-relaxed opacity-85">
-            Whether you give once, give monthly, or give your Saturday mornings as a volunteer it turns into something
-            measurable on the ground within days.
-          </p>
+          <p className="relative mx-auto mt-6 max-w-2xl text-base leading-relaxed opacity-85">A contribution can help place food in a household, medicine in a patient’s hands or essential supplies with a family facing an emergency. You can donate once, support a specific program, contribute regularly or give your time as a volunteer.</p>
           <div className="relative mt-10 flex flex-wrap justify-center gap-3">
             <a
               href={`tel:${SITE.phone.replace(/\s/g, "")}`}
@@ -309,10 +307,10 @@ function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Packing crew", d: "Weekend warehouse shifts" },
-              { t: "Field distribution", d: "Travel with the convoy" },
-              { t: "Camp support", d: "Registration & pharmacy desk" },
-              { t: "Youth mentors", d: "Speak at school sessions" },
+              { t: "Packing & Preparation", d: "Help organize ration packs, supplies and materials before field activities." },
+              { t: "Field Distribution", d: "Join supervised teams delivering assistance directly to communities." },
+              { t: "Medical Camp Support", d: "Assist with registration, patient flow, pharmacy support and logistics." },
+              { t: "Youth & Education", d: "Support mentoring, school sessions, workshops and community-learning activities." },
             ].map((r) => (
               <div key={r.t} className="rounded-2xl bg-secondary/70 p-5">
                 <p className="font-display text-sm font-bold text-primary-deep">{r.t}</p>

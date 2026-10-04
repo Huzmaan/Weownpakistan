@@ -24,7 +24,7 @@ import { Route as ServicesHealthMedicalSupportRouteImport } from './routes/servi
 import { Route as ServicesHumanitarianSupportChar38PovertyAlleviationRouteImport } from './routes/services/humanitarian-support-&-poverty-alleviation'
 import { Route as ServicesWashProgramChar38ClimateChangeAwarenessRouteImport } from './routes/services/wash-program-&-climate-change-awareness'
 import { Route as ServicesYouthEmpowermentChar38CommunityDevelopmentRouteImport } from './routes/services/youth-empowerment-&-Community-development'
-import { Route as ServicesHealthMedicalSupportMedicalSupportRouteImport } from './routes/services/health-medical-support_.medical-support'
+import { Route as ServicesServiceProgramRouteImport } from './routes/services/$service.$program'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -108,12 +108,11 @@ const ServicesYouthEmpowermentChar38CommunityDevelopmentRoute =
     path: '/youth-empowerment-&-Community-development',
     getParentRoute: () => ServicesRouteRoute,
   } as any)
-const ServicesHealthMedicalSupportMedicalSupportRoute =
-  ServicesHealthMedicalSupportMedicalSupportRouteImport.update({
-    id: '/health-medical-support_/medical-support',
-    path: '/health-medical-support/medical-support',
-    getParentRoute: () => ServicesRouteRoute,
-  } as any)
+const ServicesServiceProgramRoute = ServicesServiceProgramRouteImport.update({
+  id: '/$service/$program',
+  path: '/$service/$program',
+  getParentRoute: () => ServicesRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -131,7 +130,7 @@ export interface FileRoutesByFullPath {
   '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
   '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services/': typeof ServicesIndexRoute
-  '/services/health-medical-support/medical-support': typeof ServicesHealthMedicalSupportMedicalSupportRoute
+  '/services/$service/$program': typeof ServicesServiceProgramRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -148,7 +147,7 @@ export interface FileRoutesByTo {
   '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
   '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services': typeof ServicesIndexRoute
-  '/services/health-medical-support/medical-support': typeof ServicesHealthMedicalSupportMedicalSupportRoute
+  '/services/$service/$program': typeof ServicesServiceProgramRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -167,7 +166,7 @@ export interface FileRoutesById {
   '/services/wash-program-&-climate-change-awareness': typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
   '/services/youth-empowerment-&-Community-development': typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   '/services/': typeof ServicesIndexRoute
-  '/services/health-medical-support_/medical-support': typeof ServicesHealthMedicalSupportMedicalSupportRoute
+  '/services/$service/$program': typeof ServicesServiceProgramRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -187,7 +186,7 @@ export interface FileRouteTypes {
     | '/services/wash-program-&-climate-change-awareness'
     | '/services/youth-empowerment-&-Community-development'
     | '/services/'
-    | '/services/health-medical-support/medical-support'
+    | '/services/$service/$program'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -204,7 +203,7 @@ export interface FileRouteTypes {
     | '/services/wash-program-&-climate-change-awareness'
     | '/services/youth-empowerment-&-Community-development'
     | '/services'
-    | '/services/health-medical-support/medical-support'
+    | '/services/$service/$program'
   id:
     | '__root__'
     | '/'
@@ -222,7 +221,7 @@ export interface FileRouteTypes {
     | '/services/wash-program-&-climate-change-awareness'
     | '/services/youth-empowerment-&-Community-development'
     | '/services/'
-    | '/services/health-medical-support_/medical-support'
+    | '/services/$service/$program'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -342,11 +341,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRouteImport
       parentRoute: typeof ServicesRouteRoute
     }
-    '/services/health-medical-support_/medical-support': {
-      id: '/services/health-medical-support_/medical-support'
-      path: '/health-medical-support/medical-support'
-      fullPath: '/services/health-medical-support/medical-support'
-      preLoaderRoute: typeof ServicesHealthMedicalSupportMedicalSupportRouteImport
+    '/services/$service/$program': {
+      id: '/services/$service/$program'
+      path: '/$service/$program'
+      fullPath: '/services/$service/$program'
+      preLoaderRoute: typeof ServicesServiceProgramRouteImport
       parentRoute: typeof ServicesRouteRoute
     }
   }
@@ -361,7 +360,7 @@ interface ServicesRouteRouteChildren {
   ServicesWashProgramChar38ClimateChangeAwarenessRoute: typeof ServicesWashProgramChar38ClimateChangeAwarenessRoute
   ServicesYouthEmpowermentChar38CommunityDevelopmentRoute: typeof ServicesYouthEmpowermentChar38CommunityDevelopmentRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
-  ServicesHealthMedicalSupportMedicalSupportRoute: typeof ServicesHealthMedicalSupportMedicalSupportRoute
+  ServicesServiceProgramRoute: typeof ServicesServiceProgramRoute
 }
 
 const ServicesRouteRouteChildren: ServicesRouteRouteChildren = {
@@ -379,8 +378,7 @@ const ServicesRouteRouteChildren: ServicesRouteRouteChildren = {
   ServicesYouthEmpowermentChar38CommunityDevelopmentRoute:
     ServicesYouthEmpowermentChar38CommunityDevelopmentRoute,
   ServicesIndexRoute: ServicesIndexRoute,
-  ServicesHealthMedicalSupportMedicalSupportRoute:
-    ServicesHealthMedicalSupportMedicalSupportRoute,
+  ServicesServiceProgramRoute: ServicesServiceProgramRoute,
 }
 
 const ServicesRouteRouteWithChildren = ServicesRouteRoute._addFileChildren(

@@ -46,7 +46,7 @@ const PROJECTS = [
     title: "Eid gift & meal packs",
     place: "Karachi",
     date: "Eid 2026",
-    meta: "1,100 children",
+    meta: "700 children",
     desc: "Sweets, meal packs and new clothes so children in remote villages share in the celebration.",
   },
   {
