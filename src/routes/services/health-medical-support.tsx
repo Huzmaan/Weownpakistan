@@ -5,26 +5,19 @@ import { HealthBanner } from "@/components/services/HealthBanner";
 import { HealthOverview } from "@/components/services/HealthOverview";
 import { HealthFeatures } from "@/components/services/HealthFeatures";
 import { HealthProcess } from "@/components/services/HealthProcess";
-import { HealthFieldStory } from "@/components/services/HealthFieldStory";
-import { HealthTransparency } from "@/components/services/HealthTransparency";
 import { HealthFaq } from "@/components/services/HealthFaq";
 import { HealthCta } from "@/components/services/HealthCta";
-import ramandanDriveOne from "@/assets/our-works/orphange/005.jpeg";
-import ramandanDriveTwo from "@/assets/our-works/ramdan-drive/002.jpeg";
-import ramandanDriveThree from "@/assets/our-works/orphange/007.jpeg";
-import ramandanDriveFour from "@/assets/our-works/ramdan-drive/004.jpeg";
-import ramandanDriveFive from "@/assets/our-works/events/002.jpeg";
-import ramandanDriveSix from "@/assets/our-works/ramdan-drive/006.jpeg";
-import ramandanDriveSeven from "@/assets/our-works/orphange/013.jpeg";
-import ramandanDriveEight from "@/assets/our-works/orphange/012.jpeg";
-import ramandanDriveNine from "@/assets/our-works/ramdan-drive/009.jpeg";
-import ramandanDriveTen from "@/assets/our-works/ramdan-drive/010.jpeg";
+import { ServiceProgramsSection } from "@/components/services/ServiceCategoryPage";
+import healthAndSupportImage from "@/assets/health-and-support-image.png";
+import serviceOneImage from "@/assets/service-one-image.png";
+import breastCancerEventOne from "@/assets/field-photos/events/breast-cancer-awareness/event-1.jpg";
+import breastCancerEventTwo from "@/assets/field-photos/events/breast-cancer-awareness/event-2.jpg";
+import breastCancerEventThree from "@/assets/field-photos/events/breast-cancer-awareness/event-3.jpg";
+import breastCancerEventFour from "@/assets/field-photos/events/breast-cancer-awareness/event-4.jpg";
 
 import {
   Stethoscope,
   Pill,
-  Eye,
-  HeartPulse,
   Baby,
   Ambulance,
   MapPin,
@@ -33,23 +26,22 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 
-import healthBanner from "@/assets/our-works/orphange/005.jpeg";
-import healthOverview from "@/assets/health-and-support-image.png";
-import healthFieldStory from "@/assets/health-field-story.jpg";
+const healthBanner = serviceOneImage;
+const healthOverview = healthAndSupportImage;
 
 export const Route = createFileRoute("/services/health-medical-support")({
   head: () => ({
     meta: [
-      { title: "Health & Medical Support — Free Medical Camps | WOPF" },
+      { title: "Health & Medical Support | We Own Pakistan Foundation" },
       {
         name: "description",
         content:
-          "WOPF's Health & Medical Support program runs free medical camps, screening days and medicine counters across interior Sindh. Sponsor a camp or volunteer.",
+          "Free medical camps, a medicine bank and referrals for families in Sindh who cannot afford basic healthcare.",
       },
       { property: "og:title", content: "Health & Medical Support — WOPF" },
       {
         property: "og:description",
-        content: "Free medical camps, screening and medicine for villages across Sindh.",
+        content: "Free medical camps, a medicine bank and referrals for families in Sindh.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -58,150 +50,83 @@ export const Route = createFileRoute("/services/health-medical-support")({
 });
 
 function HealthMedicalSupportPage() {
-
   const HEALTH_OVERVIEW = {
     eyebrow: "Overview",
-    title: "Healthcare that travels to the patient, not the other way round.",
-    text: "In much of interior Sindh a simple infection can become a crisis because there is no doctor, no pharmacy and no transport. WOPF's medical teams load up doctors, screening equipment and free medicine, and set up camp right inside the village — treating hundreds of patients in a single day at zero cost to them.",
-    stats: [
-      {
-        value: "35+",
-        label: "Medical camps",
-      },
-      {
-        value: "4,800+",
-        label: "Patients treated",
-      },
-      {
-        value: "100%",
-        label: "Free medicine",
-      },
-    ],
+    title: "Basic healthcare, brought closer to families who find it hard to reach.",
+    text: "For many families, a visit to the doctor means losing a day's wages, and one prescription can cost more than a week of groceries. People wait, and a small illness turns into a serious one. Our health program takes doctors and volunteers into communities, collects suitable donated medicines, and helps patients who need hospital care find where to go next.",
+    stats: [],
   };
 
   const HEALTH_FEATURES = [
     {
       icon: Stethoscope,
-      title: "General Screening Camps",
-      text: "Full check-ups by volunteer physicians — blood pressure, diabetes, fever, infections and chronic illness.",
+      title: "Free Medical Camps",
+      text: "Consultations, basic screening and medicines for people in areas with few clinics.",
     },
     {
       icon: Pill,
-      title: "Free Medicine Counters",
-      text: "Every medicine prescribed at the camp is handed over free from our on-site pharmacy counter.",
-    },
-    {
-      icon: Eye,
-      title: "Eye Care Days",
-      text: "Vision screening, free glasses and referral for cataract surgery for elderly villagers.",
+      title: "Medicine Bank",
+      text: "Sealed, unexpired medicines donated by individuals and pharmacies are checked before they reach patients.",
     },
     {
       icon: Baby,
-      title: "Maternal & Child Health",
-      text: "Antenatal checks, nutrition supplements and vaccination guidance for mothers and infants.",
+      title: "Health Awareness",
+      text: "Sessions on maternal and child health, hygiene, common illnesses and breast cancer awareness.",
     },
     {
-      icon: HeartPulse,
-      title: "Follow-up & Referrals",
-      text: "Patients needing surgery or specialist care are referred to partner hospitals and tracked to recovery.",
+      icon: ClipboardCheck,
+      title: "Diagnostic Tests",
+      text: "Help with essential diagnostic tests where funds allow.",
     },
     {
       icon: Ambulance,
-      title: "Emergency Medical Aid",
-      text: "Support for families facing sudden medical crises — medicines, tests and hospital costs.",
+      title: "Hospital Referrals",
+      text: "Guidance to hospitals and specialists for patients who need care beyond a camp.",
     },
   ];
 
   const HEALTH_PROCESS = [
     {
       icon: MapPin,
-      title: "Village need survey",
-      text: "Local coordinators identify common illnesses, patient numbers and the nearest referral hospital.",
+      title: "Choose the place",
+      text: "Select an area with poor access to healthcare, after speaking with people who live there.",
     },
     {
       icon: Users,
-      title: "Medical team assembled",
-      text: "Doctors, dispensers and volunteers are matched to the needs reported by the community.",
+      title: "Prepare",
+      text: "Arrange doctors, medicines, seating, water and volunteers, then share the camp date with the community.",
     },
     {
       icon: Truck,
-      title: "Clinic reaches the village",
-      text: "Screening equipment, registration desks and a stocked pharmacy arrive together on camp day.",
+      title: "Run the camp",
+      text: "Volunteers manage queues and help people get registered, screened and seen by a doctor.",
     },
     {
-      icon: HeartPulse,
-      title: "Care continues afterwards",
-      text: "Urgent and specialist cases are referred, documented and followed up by the field team.",
+      icon: ClipboardCheck,
+      title: "Follow up",
+      text: "Record the number of patients seen and keep notes on cases referred for further care.",
     },
   ];
-
-  const HEALTH_FIELD_STORY = {
-    image: healthFieldStory,
-    imageAlt:
-      "A volunteer doctor speaking with an elderly woman after a rural medical camp",
-    caption: "Care beyond the prescription",
-    quote:
-      "The camp is not complete when the last medicine is handed over. It is complete when the patient knows what happens next.",
-    author: "Dr. Faheem Shaikh",
-    role: "Medical Camps Coordinator, WOPF",
-    text: "Our coordinators keep a referral record for patients who need surgery, laboratory tests or specialist care, so a diagnosis does not become another dead end.",
-  };
-
-  const HEALTH_BUDGET = [
-    {
-      label: "Doctor & screening support",
-      share: "35%",
-      width: "w-[35%]",
-    },
-    {
-      label: "Medicines dispensed",
-      share: "45%",
-      width: "w-[45%]",
-    },
-    {
-      label: "Transport & camp setup",
-      share: "20%",
-      width: "w-[20%]",
-    },
-  ];
-
-  const HEALTH_TRANSPARENCY = {
-    title: "What a Rs 25,000 camp sponsorship covers",
-    description:
-      "A contribution at this level supports screening and medicine for around 40 patients. Actual allocations vary with the village and medicines required.",
-    sponsorship: "Rs 25,000",
-    patientsText: "Approx. 40\npatients served",
-    note: "Receipts, patient counts and camp photographs are documented for every drive.",
-  };
 
   const HEALTH_FAQS = [
     {
-      q: "Who can receive treatment at a WOPF medical camp?",
-      a: "Camps are open to residents of the host village and nearby settlements. Priority is given to people who cannot easily reach or afford a clinic.",
+      q: "Is it really free?",
+      a: "Yes. Consultation and the medicines available at the camp are free of charge.",
     },
     {
-      q: "Are consultation and medicines both free?",
-      a: "Yes. Screening, consultation and the medicines available at the on-site counter are provided without charge to patients.",
-    },
-    {
-      q: "What happens when a patient needs specialist care?",
-      a: "The camp team records the case, refers the patient to an appropriate partner or hospital, and coordinates follow-up where support is available.",
-    },
-    {
-      q: "Can a doctor or medical student volunteer?",
-      a: "Yes. Doctors, pharmacists, nurses and medical students can contact WOPF to join upcoming camps according to their qualifications and availability.",
+      q: "Where is the next camp?",
+      a: "Contact us for the latest camp dates and locations.",
     },
   ];
 
-  const GALLERY = [ramandanDriveOne, ramandanDriveTwo, ramandanDriveThree, ramandanDriveFour, ramandanDriveFive, ramandanDriveSix, ramandanDriveSeven, ramandanDriveEight, ramandanDriveNine, ramandanDriveTen];
+  const GALLERY = [healthAndSupportImage, serviceOneImage];
 
   return (
     <SiteLayout>
-
       <HealthBanner
-        eyebrow="Health & Medical"
-        title="Health & Medical Support Programs designed around what"
-        intro="Free medical camps, medicine and follow-up care for villages where the nearest clinic is hours away."
+        eyebrow="Health & Medical Support"
+        title="Health & Medical Support"
+        intro="Basic healthcare, brought closer to families who find it hard to reach."
         image={healthBanner}
       />
 
@@ -219,7 +144,11 @@ function HealthMedicalSupportPage() {
 
       {/* Gallery slider */}
       <section className="container-wopf py-20">
-        <SectionHeading eyebrow="From the field" title="Snapshots from recent Activites" align="center" />
+        <SectionHeading
+          eyebrow="From the field"
+          title="Snapshots from recent activities"
+          align="center"
+        />
         <div className="reveal mt-14">
           <Carousel
             dots
@@ -252,56 +181,106 @@ function HealthMedicalSupportPage() {
 
       <HealthFeatures
         eyebrow="What we provide"
-        title="Six ways the medical program serves a village"
-        intro="Each camp is planned with local coordinators so the right doctors, medicines and equipment arrive together."
+        title="Our health programs and other support"
+        intro="Medical camps, a medicine bank and practical guidance for patients who need further care."
         features={HEALTH_FEATURES}
       />
 
+      <section className="container-wopf py-20 sm:py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
+          <div>
+            <SectionHeading
+              eyebrow="Health awareness"
+              title="Breast cancer awareness starts with an open conversation."
+            />
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              People can find it hard to talk about breast cancer. At our 2026 awareness program,
+              women and community members came together to share information and encourage one
+              another to speak up and take their health seriously. The message from the day was
+              simple: break the silence, don't let stigma stop a conversation, and seek advice early
+              from a qualified health professional.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              These photos are from the event. For concerns about your health, please speak with a
+              qualified healthcare professional.
+            </p>
+            <a
+              href="https://www.facebook.com/media/set/?vanity=wopfofficial&set=a.1415954077398033"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex rounded-full border border-primary/20 px-5 py-3 text-sm font-bold text-primary-deep transition hover:bg-primary-soft"
+            >
+              View all event photos
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              {
+                src: breastCancerEventOne,
+                alt: "WOPF breast cancer awareness program participants with an awareness message on screen",
+              },
+              {
+                src: breastCancerEventTwo,
+                alt: "Women attending WOPF's breast cancer awareness session",
+              },
+              {
+                src: breastCancerEventThree,
+                alt: "Participants at the 2026 breast cancer awareness program",
+              },
+              {
+                src: breastCancerEventFour,
+                alt: "Guests at the awareness program beside a message about early detection",
+              },
+            ].map((image) => (
+              <img
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                width={2048}
+                height={1362}
+                className="h-40 w-full rounded-2xl object-cover shadow-soft sm:h-56"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <HealthProcess
-        eyebrow="From survey to follow-up"
-        title="A one-day camp takes weeks of careful preparation"
-        intro="Every team, medicine box and referral pathway is arranged before the first patient arrives."
+        eyebrow="How we organise a camp"
+        title="Care begins with listening and continues after the camp"
+        intro="Local residents and volunteers help the team plan, prepare, run and follow up each camp."
         steps={HEALTH_PROCESS}
       />
 
-
-
-      <HealthFieldStory
-        image={HEALTH_FIELD_STORY.image}
-        imageAlt={HEALTH_FIELD_STORY.imageAlt}
-        caption={HEALTH_FIELD_STORY.caption}
-        quote={HEALTH_FIELD_STORY.quote}
-        author={HEALTH_FIELD_STORY.author}
-        role={HEALTH_FIELD_STORY.role}
-        text={HEALTH_FIELD_STORY.text}
-      />
-
-      <HealthTransparency
-        title={HEALTH_TRANSPARENCY.title}
-        description={HEALTH_TRANSPARENCY.description}
-        sponsorship={HEALTH_TRANSPARENCY.sponsorship}
-        patientsText={HEALTH_TRANSPARENCY.patientsText}
-        note={HEALTH_TRANSPARENCY.note}
-        budget={HEALTH_BUDGET}
-      />
+      <section className="container-wopf py-16 sm:py-20">
+        <SectionHeading
+          eyebrow="Who we help"
+          title="Healthcare for people facing barriers to care"
+        />
+        <p className="mt-5 max-w-4xl leading-relaxed text-muted-foreground">
+          Low-income families, daily-wage workers, older people, women and children, especially in
+          communities where the nearest clinic is far away or too expensive.
+        </p>
+      </section>
 
       <HealthFaq
         eyebrow="Medical camp questions"
-        title="What patients, donors and volunteers usually ask"
-        intro="Clear answers about access, cost, referrals and joining the medical team."
+        title="Planning a visit or looking for the next camp?"
+        intro="Contact our team for current camp dates, locations and ways to volunteer."
         items={HEALTH_FAQS}
       />
 
+      <ServiceProgramsSection serviceSlug="health-medical-support" />
+
       <HealthCta
         eyebrow="Sponsor a camp"
-        title="Rs 25,000 puts a doctor and free medicine in front of 40 patients."
-        description="Sponsor a full medical camp, donate towards the medicine counter, or join the camp team as a volunteer."
+        title="Help bring care closer to a community."
+        description="Fund a medical camp, donate unused medicines, or volunteer at a registration desk or pharmacy table."
         primaryText="Donate to this program"
         primaryLink="/contact"
-      // secondaryText="Volunteer at a camp"
-      // secondaryLink="/contact"
       />
-
     </SiteLayout>
   );
 }

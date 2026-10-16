@@ -23,7 +23,7 @@ export const SERVICES_MENU: NavChild[] = [
     label: "Health & Medical",
     to: "/services/health-medical-support",
     children: [
-      { label: "Medical Support", to: "/services/health-medical/medical-support" },
+      { label: "Medical Support", to: "/services/health-medical-support/medical-support" },
     ],
   },
 ];
@@ -52,13 +52,18 @@ export const NAV = [
 export const FOOTERNAV = [
   { label: "Medicine Bank", to: "/services/health-medical-support/medicine-bank" },
   { label: "Free Medical Camp", to: "/services/health-medical-support/medical-support" },
-  { label: "Monthly Ration Program", to: "/services/humanitarian-support-&-poverty-alleviation/monthly-ration" },
-  { label: "Ramadan Ration & Iftar", to: "/services/humanitarian-support-&-poverty-alleviation/ramadan-ration-iftar" },
+  {
+    label: "Monthly Ration Program",
+    to: "/services/humanitarian-support-&-poverty-alleviation/monthly-ration",
+  },
+  {
+    label: "Ramadan Ration & Iftar",
+    to: "/services/humanitarian-support-&-poverty-alleviation/ramadan-ration-iftar",
+  },
 ] as const;
 
-
 // export const SERVICE_PAGES: ServicePage[] = [
-  
+
 //   {
 //     label: "Health & Medical Support",
 //     to: "/services/health-medical-support",
@@ -100,7 +105,6 @@ export const FOOTERNAV = [
 //   },
 // ] as const;
 
-
 export const SERVICE_PAGES = SERVICE_GROUPS.map((g) => ({
   label: g.label,
   to: `/services/${g.slug}`,
@@ -118,57 +122,81 @@ export const STATS = [
 
 export const SERVICES = [
   {
-    slug: "Cloth",
+    slug: "health-medical-support",
     title: "Health & Medical Support",
     button: "/services/health-medical-support",
-    summary: "Bringing basic healthcare closer to communities through medical camps, screenings, medicines, health awareness and referrals for people who require further care.",
-    points: ["Medical camps and general screenings", "Medicine and diagnostic support", "Maternal, child and community health awareness"],
+    summary:
+      "Free medical camps, a medicine bank and referrals for patients who need further care.",
+    points: [
+      "Free consultations, basic screening and medicines",
+      "Prescription-based medicine support",
+      "Health awareness and hospital referrals",
+    ],
   },
   {
-    slug: "welfare",
+    slug: "disaster-&-emergency-relief",
     title: "Disaster & Emergency Relief",
     button: "/services/disaster-&-emergency-relief",
-    summary: "Mobilizing volunteers and essential supplies when floods, severe weather or other emergencies disrupt families and communities.",
-    points: ["Emergency food and drinking water", "Shelter and essential household support", "Early recovery and rehabilitation assistance"],
+    summary:
+      "Food, drinking water and essentials when floods or other emergencies hit a community.",
+    points: [
+      "Emergency food and safe drinking water",
+      "Shelter and essential household items",
+      "Early recovery support",
+    ],
   },
   {
-    slug: "water",
+    slug: "education-&-skills-development",
     title: "Education & Skills Development",
     button: "/services/education-&-skills-development",
     summary:
-      "Helping children and young people overcome barriers to learning through educational support, guidance and practical skills development.",
-    points: ["School and learning support", "Digital and vocational skills", "Mentoring and career guidance"],
+      "School fee support, computer training and career guidance for children and young people.",
+    points: [
+      "Help children stay in school",
+      "Practical computer training",
+      "Career advice and mentoring",
+    ],
   },
   {
-    slug: "iftar",
+    slug: "humanitarian-support-&-poverty-alleviation",
     title: "Humanitarian Support & Poverty Alleviation",
     button: "/services/humanitarian-support-&-poverty-alleviation",
-    summary: "Supporting households facing financial hardship with food, seasonal essentials and need-based assistance delivered with dignity.",
-    points: ["Family ration support", "Seasonal clothing and winter assistance", "Ramadan and Eid support"],
+    summary: "Monthly ration for families in hardship, plus Ramadan ration and Iftar drives.",
+    points: [
+      "Monthly ration packs",
+      "Ramadan ration and Iftar",
+      "Winter, Eid and urgent family support",
+    ],
   },
   {
-    slug: "youth",
+    slug: "wash-program-&-climate-change-awareness",
     title: "Wash program & Climate Change Awareness",
     button: "/services/wash-program-&-climate-change-awareness",
-    summary:
-      "Improving access to safe water and promoting better hygiene, environmental responsibility and community awareness.",
-    points: ["Hand pumps and water solutions", "Hygiene and safe-water awareness", "Tree plantation and climate awareness"],
+    summary: "Hand pumps, safe drinking water, hygiene sessions and tree plantation.",
+    points: [
+      "Hand pumps and water solutions",
+      "Hygiene and safe-water awareness",
+      "Tree plantation and climate awareness",
+    ],
   },
   {
-    slug: "medical",
+    slug: "disability-care-support-&-rehabilitation",
     title: "Disability Care, Support & Rehabilitation",
     button: "/services/disability-care-support-&-rehabilitation",
     summary:
-      "Supporting people with disabilities and their families through mobility assistance, referrals and practical inclusion-focused support.",
-    points: ["Wheelchairs and mobility aids", "Rehabilitation guidance and referrals", "Family and community support"],
+      "Wheelchairs, mobility aids and support for families caring for a child with special needs.",
+    points: [
+      "Wheelchairs and mobility aids",
+      "Rehabilitation guidance and referrals",
+      "Family and community support",
+    ],
   },
   {
-  slug: "workYouth",
-  title: "Youth Empowerment & Community Development",
-  button: "/services/youth-empowerment-&-Community-development",
-  summary:
-    "Giving young people opportunities to volunteer, learn, lead and contribute to the communities around them.",
-  points: ["Leadership and mentoring", "Skills workshops", "Community service and engagement"],
+    slug: "youth-empowerment-&-Community-development",
+    title: "Youth Empowerment & Community Development",
+    button: "/services/youth-empowerment-&-Community-development",
+    summary: "Volunteering, internships and leadership training for young people.",
+    points: ["Youth volunteering", "Internships and mentoring", "Community leadership training"],
   },
 ];
 
@@ -246,13 +274,55 @@ export const TESTIMONIALS = [
 ];
 
 export const TEAM = [
-  { name: "Nadir Abbas", role: "Founder & Chairman", initials: "NA", image: nadirAbbas  , category: "board",},
+  {
+    name: "Nadir Abbas",
+    role: "Founder & Chairman",
+    initials: "NA",
+    image: nadirAbbas,
+    category: "board",
+  },
   // { name: "Maheen Akhtar", role: "President", initials: "MA", image: maheenAkhtar },
-  { name: "Ayax Hussain Solangi", role: "Vice President", initials: "AHS", image: ayaxHussain , category: "board", description: "As Vice President of WOPF, I play an active role in supporting organizational leadership, strategic planning, and community-focused initiatives. I work closely with the executive team and volunteers to strengthen collaboration, expand our outreach, and turn WOPF’s vision into practical action. My contribution focuses on community development, volunteer engagement, partnerships, and creating sustainable social impact for underserved communities." },
-  { name: "Muhammad Imran", role: "Senior Vice President", initials: "MI", image: muhammadImran , category: "board", description: "As Senior Vice President at WOPF, I am dedicated to driving initiatives that create real and lasting impact for communities in need. I work closely with our leadership to guide strategic decisions, foster strong internal collaboration, and build meaningful partnerships. My focus is on empowering our Executive Team and volunteers, strengthening our organizational structure, and developing sustainable projects that promote social well-being and create opportunities for positive change." },
-  { name: "Tehreem Ali", role: "General Secretary", initials: "TA", image: tehreemAli , category: "executive", description: "As the General Secretary for our NGO, I take care of our daily office work, keep the board members connected, and make sure we follow all laws and rules. By organizing our work and building good relationships, I help turn our big plans into real results. I am fully dedicated to creating lasting change and helping the communities we serve."},
-  { name: "Muhammad Sufyan", role: "General Secretary", initials: "MS", image: muhammadSufyan , category: "executive", },
-  { name: "Huzmaan Pasta", role: "Operational Manager", initials: "HP", image: huzmaanPasta , category: "team", },
+  {
+    name: "Ayax Hussain Solangi",
+    role: "Vice President",
+    initials: "AHS",
+    image: ayaxHussain,
+    category: "board",
+    description:
+      "As Vice President of WOPF, I play an active role in supporting organizational leadership, strategic planning, and community-focused initiatives. I work closely with the executive team and volunteers to strengthen collaboration, expand our outreach, and turn WOPF’s vision into practical action. My contribution focuses on community development, volunteer engagement, partnerships, and creating sustainable social impact for underserved communities.",
+  },
+  {
+    name: "Muhammad Imran",
+    role: "Senior Vice President",
+    initials: "MI",
+    image: muhammadImran,
+    category: "board",
+    description:
+      "As Senior Vice President at WOPF, I am dedicated to driving initiatives that create real and lasting impact for communities in need. I work closely with our leadership to guide strategic decisions, foster strong internal collaboration, and build meaningful partnerships. My focus is on empowering our Executive Team and volunteers, strengthening our organizational structure, and developing sustainable projects that promote social well-being and create opportunities for positive change.",
+  },
+  {
+    name: "Tehreem Ali",
+    role: "General Secretary",
+    initials: "TA",
+    image: tehreemAli,
+    category: "executive",
+    description:
+      "As the General Secretary for our NGO, I take care of our daily office work, keep the board members connected, and make sure we follow all laws and rules. By organizing our work and building good relationships, I help turn our big plans into real results. I am fully dedicated to creating lasting change and helping the communities we serve.",
+  },
+  {
+    name: "Muhammad Sufyan",
+    role: "General Secretary",
+    initials: "MS",
+    image: muhammadSufyan,
+    category: "executive",
+  },
+  {
+    name: "Huzmaan Pasta",
+    role: "Operational Manager",
+    initials: "HP",
+    image: huzmaanPasta,
+    category: "team",
+  },
 ];
 
 export const POSTS = [
@@ -313,8 +383,16 @@ export const POSTS = [
 ];
 
 export const DONATION_TIERS = [
-  { amount: "Rs 3,500", label: "One family ration pack", note: "Feeds a family of six for two weeks" },
+  {
+    amount: "Rs 3,500",
+    label: "One family ration pack",
+    note: "Feeds a family of six for two weeks",
+  },
   { amount: "Rs 7,000", label: "Iftar for 25 people", note: "A full dastarkhwan sitting" },
-  { amount: "Rs 25,000", label: "Medical camp sponsorship", note: "Screening and medicine for 40 patients" },
+  {
+    amount: "Rs 25,000",
+    label: "Medical camp sponsorship",
+    note: "Screening and medicine for 40 patients",
+  },
   { amount: "Rs 60,000", label: "One hand pump", note: "Clean water for an entire settlement" },
 ];

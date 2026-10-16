@@ -7,7 +7,7 @@ import workYouth from "@/assets/work-youth.jpg";
 import heroIftar from "@/assets/our-works/ramdan-drive/006.jpeg";
 import heroWater from "@/assets/hero-water.jpg";
 import heroFood from "@/assets/our-works/orphange/008.jpeg";
-import workMedical from "@/assets/work-medical.jpg";
+import healthAndSupportImage from "@/assets/health-and-support-image.png";
 import workChildren from "@/assets/our-works/orphange/002.jpeg";
 import workRation from "@/assets/our-works/orphange/008.jpeg";
 
@@ -30,7 +30,14 @@ export const Route = createFileRoute("/blog")({
   component: Blog,
 });
 
-const IMAGES = [heroIftar, heroWater, workYouth, workMedical, workChildren, workRation];
+const IMAGES = [
+  heroIftar,
+  heroWater,
+  workYouth,
+  healthAndSupportImage,
+  workChildren,
+  workRation,
+];
 
 function Blog() {
   const [featured, ...rest] = POSTS;

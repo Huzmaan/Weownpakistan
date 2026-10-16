@@ -6,7 +6,7 @@ import { DonateSection } from "@/components/site/DonateSection";
 import { TestimonialsSection } from "@/components/site/TestimonialsSection";
 import heroWater from "@/assets/hero-water.jpg";
 import workYouth from "@/assets/work-youth.jpg";
-import workMedical from "@/assets/work-medical.jpg";
+import healthAndSupportImage from "@/assets/health-and-support-image.png";
 import workRation from "@/assets/our-works/orphange/008.jpeg";
 import workOrphange from "@/assets/our-works/orphange/002.jpeg";
 import ramandanDriveOne from "@/assets/our-works/orphange/005.jpeg";
@@ -74,7 +74,7 @@ const PROJECTS = [
     desc: "Clean water access for desert settlements where women previously walked kilometres each morning.",
   },
   {
-    image: workMedical,
+    image: healthAndSupportImage,
     title: "Free medical camp",
     place: "Thatta, Sindh",
     date: "November 2025",
@@ -100,7 +100,7 @@ function OurWorks() {
         eyebrow="Our works"
         title="Every project here has a register, a date and a photograph."
         intro="A portfolio of drives completed across Sindh with the numbers we reported to our donors."
-        image={workMedical}
+        image={healthAndSupportImage}
       />
 
       {/* Gallery slider */}

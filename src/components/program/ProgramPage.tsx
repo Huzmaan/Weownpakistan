@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { CheckCircle2, HandHeart, Quote, ChevronDown, Sparkles } from "lucide-react";
 import type { Program, ServiceGroup } from "@/lib/programs";
-import {SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { Carousel } from "@/components/site/Carousel";
 
 export function ProgramPage({ group, program }: { group: ServiceGroup; program: Program }) {
@@ -11,24 +11,38 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
   const eyebrow = program.eyebrow ?? group.label;
   const heading = program.bannerHeading ?? program.title;
   const faqs = program.faqs ?? [];
+  const sections = program.sections ?? [];
 
   return (
     <>
       {/* 1. Banner */}
-      <section className="relative isolate flex min-h-[60vh] items-end overflow-hidden md:min-h-[70vh]">
-        <img
-          src={program.image}
-          alt={program.title}
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/75 to-primary/20" />
+      <section className="relative isolate flex min-h-[60vh] items-end overflow-hidden bg-ink md:min-h-[70vh]">
+        {program.image && (
+          <>
+            <img
+              src={program.image}
+              alt={program.title}
+              className="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/75 to-primary/20" />
+          </>
+        )}
         <div className="container-wopf w-full pb-14 pt-32 text-primary-foreground md:pb-20">
-          <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-2 text-sm opacity-80">
-            <Link to="/" className="hover:underline">Home</Link>
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-4 flex flex-wrap items-center gap-2 text-sm opacity-80"
+          >
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
             <span>/</span>
-            <Link to="/services" className="hover:underline">Services</Link>
+            <Link to="/services" className="hover:underline">
+              Services
+            </Link>
             <span>/</span>
-            <Link to={`/services/${group.slug}` as never} className="hover:underline">{group.label}</Link>
+            <Link to={`/services/${group.slug}` as never} className="hover:underline">
+              {group.label}
+            </Link>
             <span>/</span>
             <span className="font-semibold text-accent">{program.title}</span>
           </nav>
@@ -37,10 +51,17 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
           </h1>
           <p className="mt-4 max-w-2xl text-base opacity-90 sm:text-lg">{program.short}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/" hash="donate" className="rounded-full bg-accent px-7 py-3 font-semibold text-accent-foreground shadow-lift transition hover:opacity-95">
+            <Link
+              to="/"
+              hash="donate"
+              className="rounded-full bg-accent px-7 py-3 font-semibold text-accent-foreground shadow-lift transition hover:opacity-95"
+            >
               Donate Now
             </Link>
-            <a href="#about-program" className="rounded-full border border-current px-7 py-3 font-semibold transition hover:bg-white/10">
+            <a
+              href="#about-program"
+              className="rounded-full border border-current px-7 py-3 font-semibold transition hover:bg-white/10"
+            >
               Learn More
             </a>
           </div>
@@ -48,24 +69,20 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
       </section>
 
       {/* 2. About + What We Provide */}
-      <section id="about-program" className="container-wopf grid scroll-mt-28 items-center gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16">
-        <div className="relative">
-          <img
-            src={program.image}
-            alt={program.title}
-            loading="lazy"
-            className="aspect-[4/3] w-full rounded-3xl object-cover shadow-soft"
-          />
-          <div className="absolute -bottom-5 -right-3 hidden rounded-2xl bg-accent px-6 py-4 font-bold text-accent-foreground shadow-lift sm:block">
-            Since 2015
-          </div>
-        </div>
+      <section
+        id="about-program"
+        className={`container-wopf grid scroll-mt-28 items-center gap-10 py-16 sm:py-20 lg:gap-16 ${program.image ? "lg:grid-cols-2" : "mx-auto max-w-4xl"}`}
+      >
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">{eyebrow}</p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-primary-deep md:text-4xl">{program.title}</h2>
+          <h2 className="mt-2 font-display text-3xl font-bold text-primary-deep md:text-4xl">
+            {program.title}
+          </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">{program.intro}</p>
           {program.extraIntro?.map((p, idx) => (
-            <p key={idx} className="mt-4 leading-relaxed text-muted-foreground">{p}</p>
+            <p key={idx} className="mt-4 leading-relaxed text-muted-foreground">
+              {p}
+            </p>
           ))}
           <ul className="mt-6 space-y-3">
             {program.points.map((pt) => (
@@ -77,6 +94,43 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
           </ul>
         </div>
       </section>
+
+      {sections.length > 0 && (
+        <section className="bg-muted/40 py-16 sm:py-20">
+          <div className="container-wopf">
+            <div className="grid gap-6 md:grid-cols-2">
+              {sections.map((section) => (
+                <article key={section.title} className="rounded-3xl bg-card p-7 shadow-soft sm:p-8">
+                  <h2 className="font-display text-2xl font-bold text-primary-deep">
+                    {section.title}
+                  </h2>
+                  {section.paragraphs?.map((paragraph) => (
+                    <p key={paragraph} className="mt-4 leading-relaxed text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  ))}
+                  {section.items && (
+                    <ul className="mt-5 space-y-3">
+                      {section.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-3 leading-relaxed text-foreground/85"
+                        >
+                          <CheckCircle2
+                            className="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                            aria-hidden="true"
+                          />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 3. Slider Gallery: Our Recent Works */}
       {program.gallery && program.gallery.length > 0 && (
@@ -90,7 +144,8 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
                 Our Recent Works
               </h2>
               <p className="mt-2 text-muted-foreground max-w-xl">
-                Glimpses of our ongoing field operations, distributions, and relief activities across Sindh.
+                Glimpses of our ongoing field operations, distributions, and relief activities
+                across Sindh.
               </p>
             </div>
 
@@ -105,7 +160,10 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
                 autoplaySpeed={3500}
                 responsive={[
                   { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
-                  { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1, dots: true } },
+                  {
+                    breakpoint: 1024,
+                    settings: { slidesToShow: 2, slidesToScroll: 1, dots: true },
+                  },
                 ]}
               >
                 {program.gallery.map((src, i) => (
@@ -134,14 +192,20 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
       {/* 4. Story / Quote */}
       {program.story && (
         <section className="bg-primary text-primary-foreground">
-          <div className="grid lg:grid-cols-2">
-            <img
-              src={program.story.image ?? program.image}
-              alt={`${program.story.name}, ${program.story.role}`}
-              loading="lazy"
-              className="h-72 w-full object-cover sm:h-96 lg:h-full min-h-[360px]"
-            />
-            <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
+          <div
+            className={`grid ${program.story.image ? "lg:grid-cols-2" : "container-wopf max-w-4xl"}`}
+          >
+            {program.story.image && (
+              <img
+                src={program.story.image}
+                alt={`${program.story.name}, ${program.story.role}`}
+                loading="lazy"
+                className="h-72 w-full object-cover sm:h-96 lg:h-full min-h-[360px]"
+              />
+            )}
+            <div
+              className={`flex flex-col justify-center py-8 ${program.story.image ? "p-8 sm:p-12 lg:p-16" : "sm:py-12"}`}
+            >
               <Quote className="h-10 w-10 text-accent" aria-hidden="true" />
               <blockquote className="mt-6 text-xl font-medium leading-relaxed md:text-2xl">
                 "{program.story.quote}"
@@ -167,7 +231,8 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
                 Frequently Asked Questions
               </h2>
               <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-                Everything you need to know about our {program.title.toLowerCase()} operations and how you can participate.
+                Everything you need to know about our {program.title.toLowerCase()} operations and
+                how you can participate.
               </p>
             </div>
 
@@ -212,7 +277,7 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
           <div>
             <h2 className="font-display text-2xl font-bold">Support {program.title}</h2>
             <p className="mt-2 opacity-90 max-w-xl">
-              Your donation, Zakat, or volunteer time brings direct relief to struggling families in rural and urban Sindh.
+              Get in touch to learn about current ways to support this program or take part.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
@@ -226,7 +291,7 @@ export function ProgramPage({ group, program }: { group: ServiceGroup; program: 
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-current px-6 py-3 text-sm font-semibold transition hover:bg-white/10"
             >
-              <HandHeart className="h-4 w-4" aria-hidden="true" /> Join as Volunteer
+              <HandHeart className="h-4 w-4" aria-hidden="true" /> Get in touch
             </Link>
           </div>
         </div>

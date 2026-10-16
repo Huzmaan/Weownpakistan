@@ -14,8 +14,8 @@ export const Route = createFileRoute("/services/$service/$program")({
     const { program, group } = loaderData;
     return {
       meta: [
-        { title: `${program.title} | ${group.label} | WOPF` },
-        { name: "description", content: program.short },
+        { title: program.metaTitle ?? `${program.title} | ${group.label} | WOPF` },
+        { name: "description", content: program.metaDescription ?? program.short },
       ],
     };
   },
@@ -37,7 +37,9 @@ function ProgramNotFound() {
     <SiteLayout>
       <div className="container-wopf py-24 text-center">
         <h1 className="font-display text-4xl font-bold text-primary-deep">Program Not Found</h1>
-        <p className="mt-4 text-muted-foreground">The requested welfare program could not be found.</p>
+        <p className="mt-4 text-muted-foreground">
+          The requested welfare program could not be found.
+        </p>
       </div>
     </SiteLayout>
   );

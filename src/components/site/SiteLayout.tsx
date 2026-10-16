@@ -71,12 +71,16 @@ export function PageBanner({
   eyebrow: string;
   title: string;
   intro: string;
-  image: string;
+  image?: string;
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-ink">
-      <img src={image} alt="" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover opacity-45" />
-      <div className="veil absolute inset-0" />
+      {image && (
+        <>
+          <img src={image} alt="" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover opacity-45" />
+          <div className="veil absolute inset-0" />
+        </>
+      )}
       <div className="container-wopf relative py-16 sm:py-24 lg:py-32">
         <span className="inline-flex rounded-full bg-ink-foreground/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
           {eyebrow}

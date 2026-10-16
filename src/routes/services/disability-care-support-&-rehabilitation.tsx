@@ -11,16 +11,8 @@ import { HealthFieldStory } from "@/components/services/HealthFieldStory";
 import { HealthTransparency } from "@/components/services/HealthTransparency";
 import { HealthFaq } from "@/components/services/HealthFaq";
 import { HealthCta } from "@/components/services/HealthCta";
-import ramandanDriveOne from "@/assets/our-works/orphange/005.jpeg";
-import ramandanDriveTwo from "@/assets/our-works/ramdan-drive/002.jpeg";
-import ramandanDriveThree from "@/assets/our-works/orphange/007.jpeg";
-import ramandanDriveFour from "@/assets/our-works/ramdan-drive/004.jpeg";
-import ramandanDriveFive from "@/assets/our-works/events/002.jpeg";
-import ramandanDriveSix from "@/assets/our-works/ramdan-drive/006.jpeg";
-import ramandanDriveSeven from "@/assets/our-works/orphange/013.jpeg";
-import ramandanDriveEight from "@/assets/our-works/orphange/012.jpeg";
-import ramandanDriveNine from "@/assets/our-works/ramdan-drive/009.jpeg";
-import ramandanDriveTen from "@/assets/our-works/ramdan-drive/010.jpeg";
+import { ServiceCategoryPage } from "@/components/services/ServiceCategoryPage";
+import { SERVICE_PAGE_IMAGES } from "@/lib/service-page-images";
 
 
 import {
@@ -36,28 +28,27 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 
-import healthBanner from "@/assets/our-works/orphange/005.jpeg"
-import healthOverview from "@/assets/health-and-support-image.png";
-import healthFieldStory from "@/assets/health-field-story.jpg";
+import healthFieldStory from "@/assets/health-and-support-image.png";
+const PAGE_IMAGES = SERVICE_PAGE_IMAGES["disability-care-support-&-rehabilitation"];
 
 export const Route = createFileRoute("/services/disability-care-support-&-rehabilitation")({
   head: () => ({
     meta: [
-      { title: "Disability Care, Support & Rehabilitation — Free Medical Camps | WOPF" },
+      { title: "Disability Care, Support & Rehabilitation | We Own Pakistan Foundation" },
       {
         name: "description",
         content:
-          "WOPF's Disability Care, Support & Rehabilitation program runs free medical camps, screening days and medicine counters across interior Sindh. Sponsor a camp or volunteer.",
+          "Wheelchairs, mobility aids, rehabilitation referrals and family support for people with disabilities and children with special needs in Sindh.",
       },
-      { property: "og:title", content: "Disability Care, Support & Rehabilitation — WOPF" },
+      { property: "og:title", content: "Disability Care, Support & Rehabilitation | We Own Pakistan Foundation" },
       {
         property: "og:description",
-        content: "Free medical camps, screening and medicine for villages across Sindh.",
+        content: "Wheelchairs, mobility aids and support for people with disabilities and their families.",
       },
       { property: "og:type", content: "website" },
     ],
   }),
-  component: HealthMedicalSupportPage,
+  component: () => <ServiceCategoryPage serviceSlug="disability-care-support-&-rehabilitation" />,
 });
 
 function HealthMedicalSupportPage() {
@@ -105,7 +96,7 @@ const HEALTH_OVERVIEW = {
   ],
 };
 
-const GALLERY = [ramandanDriveOne, ramandanDriveTwo, ramandanDriveThree, ramandanDriveFour, ramandanDriveFive, ramandanDriveSix, ramandanDriveSeven, ramandanDriveEight, ramandanDriveNine, ramandanDriveTen];
+const GALLERY = PAGE_IMAGES.gallery;
 
 const HEALTH_FEATURES = [
   {
@@ -164,7 +155,7 @@ const HEALTH_PROCESS = [
 ];
 
 const HEALTH_FIELD_STORY = {
-  image: healthFieldStory,
+  image: PAGE_IMAGES.story,
   imageAlt:
     "A volunteer doctor speaking with an elderly woman after a rural medical camp",
   caption: "Care beyond the prescription",
@@ -228,7 +219,7 @@ const HEALTH_FAQS = [
         eyebrow="Disability Care, Support & Rehabilitation"
         title="Health & Medical Support Programs designed around what"
         intro="Free medical camps, medicine and follow-up care for villages where the nearest clinic is hours away."
-        image={healthBanner}
+        image={PAGE_IMAGES.banner}
       />
 
       {/* <HealthImpact
@@ -236,7 +227,7 @@ const HEALTH_FAQS = [
       /> */}
 
       <HealthOverview
-        image={healthOverview}
+        image={PAGE_IMAGES.overview}
         eyebrow={HEALTH_OVERVIEW.eyebrow}
         title={HEALTH_OVERVIEW.title}
         text={HEALTH_OVERVIEW.text}
